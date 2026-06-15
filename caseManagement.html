@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GestorFPQRS - Gestión de Casos Financieros</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/index.css" />
+</head>
+<body>
+  <div class="container-fluid p-0">
+
+    <div class="w-100 min-vh-100 d-flex justify-content-between align-items-stretch">
+      <section class="Management-left-bar py-4 text-white d-none d-lg-flex flex-column flex-shrink-0 bg-clr-primary">
+        <div class="Management-left-bar__content d-flex align-items-center gap-2 border-bottom border-1 border-white border-opacity-10 w-100 px-3 pb-3 position-relative">
+          <figure class="m-0 me-1 Management-left-bar__content-logo">
+            <img src="./assets/images/logo.webp" alt="Logo" />
+          </figure>
+          <p class="m-0 fw-bold hide-nav-child">GestorFPQRS</p>
+
+          <button type="button"  id="btnMenuAction" class="bg-white border border-1 border-dark-subtle rounded-circle position-absolute top-0 start-100 translate-middle d-flex justify-content-center align-items-center btn-float mt-3">
+            <i class="bi bi-chevron-right text-small2"></i>
+          </button>
+        </div>
+
+        <div class="Management-left-bar__menu p-2">
+          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 hide-nav-child">Operación</p>
+          <nav class="navigation d-flex flex-column gap-1">
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3 bg-white bg-opacity-25">
+              <i class="bi bi-folder2-open ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Bandeja de entrada</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-file-earmark-text ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Detalle de Caso</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-list-check ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Registrar FPQRS</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-plus-square ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Crear Caso (Operador)</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-bar-chart ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Métricas</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-graph-up-arrow ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Analítica</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-download ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Exportar Casos</span>
+            </a>
+          </nav>
+        </div>
+        <div class="Management-left-bar__menu p-2">
+          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 hide-nav-child">Administración</p>
+          <nav class="navigation d-flex flex-column gap-1">
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-shield-check ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Auditoría</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-gear ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Parametrización</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-flask ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Parámetros Alt.</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-book ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Modelo Cat. Resp.</span>
+            </a>
+          </nav>
+        </div>
+
+      </section>
+
+      <section class="d-flex justify-content-center align-items-center py-5 flex-grow-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, cupiditate excepturi laudantium officiis dignissimos id delectus perferendis, modi illo iste at harum ut et ea saepe aliquid rerum possimus mollitia!</p>
+      </section>
+    </div>
+</body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
+</html>

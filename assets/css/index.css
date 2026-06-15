@@ -1,0 +1,91 @@
+:root{
+  --clr-primary: #1e3a5f;
+  --bg-gray:#f4f6f9;
+  --font-family-primary: "Plus Jakarta Sans", sans-serif;
+  --text-blue-black: #0f1c2e;
+  --card-background: #64748b;
+  --card-background-secondary: #e8eef5;
+}
+
+body{
+  background-color: var(--bg-gray);
+  font-family: var(--font-family-primary);
+}
+
+.clr-primary{
+  color: var(--clr-primary);
+}
+.decoration-hover:hover{
+  text-decoration: underline;
+}
+.bg-card-secondary{
+  background-color: var(--card-background-secondary);
+}
+/* LOGIN */
+.Login-bar{
+  background-color: var(--clr-primary);
+  width: 80%;
+  max-width: 600px;
+}
+.Login-bar__logo-image img{
+  width: 40px;
+}
+.Login-bar__logo-title{
+  font-size: 1.25rem;
+}
+.text-small{
+  font-size: 0.75rem;
+}
+.text-small2{
+  font-size: 0.65rem;
+}
+.text-sm{
+  font-size: .9rem;
+}
+.w-35px{
+  width: 35px;
+}
+.h-38px{
+  height: 38px;
+}
+/* Form-Login */
+.Login-form{
+  width: 90%;
+  max-width: 500px;
+}
+.cl-card-text{
+  color: var(--card-background);
+}
+.text-blue-black{
+  color: var(--text-blue-black);
+}
+.bg-clr-primary{
+  background-color: var(--clr-primary);
+}
+.Login-form__content input:focus {
+  border-color: #000000;
+  outline: 0;
+  box-shadow: 0 0 0 .18rem rgba(13, 110, 253, .25);
+}
+.Login-form__content input::placeholder{
+  color: gray;
+}
+.Login-form__content input.form-check-input:checked {
+    background-color: #1e3a5f;
+    border-color: #1e3a5f;
+}
+.Login-form__content input.form-check-input:focus{
+  box-shadow: none;
+}
+.link-lost-password{
+  text-decoration: none;
+}
+.link-lost-password:hover{
+  text-decoration: underline;
+}
+/* Management */
+.Management-left-bar__content-logo img { width: 32px; }
+.Management-left-bar__content .btn-float { width: 25px; height: 25px; }
+.Management-left-bar__content .btn-float i{line-height: 0;}
+.Management-left-bar__menu .menu-title, .Management-left-bar__menu + .menu-title{letter-spacing: .5px;}
+.Management-left-bar__menu .navigation a{ font-size: 14px;}
