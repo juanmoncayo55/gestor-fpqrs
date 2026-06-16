@@ -89,3 +89,15 @@ body{
 .Management-left-bar__content .btn-float i{line-height: 0;}
 .Management-left-bar__menu .menu-title, .Management-left-bar__menu + .menu-title{letter-spacing: .5px;}
 .Management-left-bar__menu .navigation a{ font-size: 14px;}
+.ff-zilla{font-family: 'Zilla Slab', serif;font-variant-numeric: lining-nums;letter-spacing: 2px;}
+.dot-danger{top: 10%; right: 6%;}
+.fs-14{font-size: 14px;}
+/*
+ESTILOS APLICADOS A SCROLL EN EL NAVIGATION DEL DASHBOARD
+max-height: 100vh;
+overflow-y: scroll;
+overflow-x: hidden;
+scrollbar-color: #566b87 #1e3a5f;
+scrollbar-width: thin;
+
+*/

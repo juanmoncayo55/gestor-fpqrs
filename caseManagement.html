@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/index.css" />
 </head>
 <body>
@@ -17,65 +17,65 @@
     <div class="w-100 min-vh-100 d-flex justify-content-between align-items-stretch">
       <section class="Management-left-bar py-4 text-white d-none d-lg-flex flex-column flex-shrink-0 bg-clr-primary">
         <div class="Management-left-bar__content d-flex align-items-center gap-2 border-bottom border-1 border-white border-opacity-10 w-100 px-3 pb-3 position-relative">
-          <figure class="m-0 me-1 Management-left-bar__content-logo">
+          <figure class="m-0 Management-left-bar__content-logo">
             <img src="./assets/images/logo.webp" alt="Logo" />
           </figure>
-          <p class="m-0 fw-bold hide-nav-child">GestorFPQRS</p>
+          <p class="m-0 ms-1 fw-bold hide-nav-child">GestorFPQRS</p>
 
           <button type="button"  id="btnMenuAction" class="bg-white border border-1 border-dark-subtle rounded-circle position-absolute top-0 start-100 translate-middle d-flex justify-content-center align-items-center btn-float mt-3">
             <i class="bi bi-chevron-right text-small2"></i>
           </button>
         </div>
 
-        <div class="Management-left-bar__menu p-2">
-          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 hide-nav-child">Operación</p>
+        <div class="Management-left-bar__menu p-2 py-3">
+          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 mt-0 hide-nav-child">Operación</p>
           <nav class="navigation d-flex flex-column gap-1">
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3 bg-white bg-opacity-25">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3 bg-white bg-opacity-25">
               <i class="bi bi-folder2-open ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Bandeja de entrada</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-file-earmark-text ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Detalle de Caso</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-list-check ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Registrar FPQRS</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-plus-square ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Crear Caso (Operador)</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-bar-chart ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Métricas</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-graph-up-arrow ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Analítica</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-download ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Exportar Casos</span>
             </a>
           </nav>
         </div>
-        <div class="Management-left-bar__menu p-2">
-          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 hide-nav-child">Administración</p>
+        <div class="Management-left-bar__menu p-2 pt-0">
+          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 mt-0 hide-nav-child">Administración</p>
           <nav class="navigation d-flex flex-column gap-1">
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-shield-check ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Auditoría</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-gear ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Parametrización</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-flask ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Parámetros Alt.</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 pe-1 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-book ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Modelo Cat. Resp.</span>
             </a>
@@ -84,8 +84,94 @@
 
       </section>
 
-      <section class="d-flex justify-content-center align-items-center py-5 flex-grow-1">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, cupiditate excepturi laudantium officiis dignissimos id delectus perferendis, modi illo iste at harum ut et ea saepe aliquid rerum possimus mollitia!</p>
+      <section class="d-flex justify-content-center py-4 flex-grow-1">
+        <div class="container-xxl mx-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="d-flex flex-column">
+              <h3 class="text-blue-black fw-normal mb-0 fs-4">Bandeja de Casos</h3>
+              <p class="cl-card-text text-sm mb-0 pt-1">Gestión de casos FPQRS — Actualizado: 07/05/2026 00:18</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="d-flex justify-content-center align-items-center gap-2 border-1 p-2 px-3 rounded-3 bg-white border border-1 border-dark-subtle">
+                <i class="bi bi-download fs-14 cl-card-text"></i>
+                <span class="fs-14 cl-card-text">Exportar</span>
+              </button>
+              <button class="d-flex justify-content-center align-items-center gap-2 border-1 p-2 px-3 rounded-3 bg-white border border-1 border-dark-subtle">
+                <i class="bi bi-download fs-14 cl-card-text"></i>
+                <span class="fs-14 cl-card-text">Exportar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="container-fluid mt-4">
+            <section class="row gap-3">
+              <div class="bg-white border border-1 border-dark-subtle p-3 rounded-4 col">
+                <i class="bi bi-folder p-1 fs-5 clr-primary"></i>
+
+                <div class="flex flex-column mt-4">
+                  <p class="fs-3 ff-zilla mb-0 lh-1 clr-primary">125</p>
+                  <p class="text-small m-0 fw-normal">Casos activos</p>
+                  <p class="text-small2 m-0 clr-primary">En proceso de gestión</p>
+                </div>
+              </div>
+              <div class="bg-white border border-2 border-danger border-opacity-25 p-3 rounded-4 col position-relative">
+                <i class="bi bi-exclamation-triangle fs-5 bg-danger bg-opacity-10 text-danger d-inline-flex p-2 rounded-3 fw-bolder"></i>
+
+                <div class="flex flex-column mt-3">
+                  <p class="fs-3 ff-zilla mb-0 lh-1 text-danger">111</p>
+                  <p class="text-small m-0 fw-normal">SLA vencido</p>
+                  <p class="text-small2 m-0 clr-primary">Requieren atención urgente</p>
+                </div>
+
+                <p class="dot-danger bg-danger rounded-circle p-1 position-absolute"></p>
+              </div>
+              <div class="bg-white border border-2 border-warning border-opacity-25 p-3 rounded-4 col">
+                <i class="bi bi-clock fs-5 bg-warning bg-opacity-10 text-warning d-inline-flex p-2 rounded-3 fw-bolder"></i>
+
+                <div class="flex flex-column mt-3">
+                  <p class="fs-3 ff-zilla mb-0 lh-1 text-warning">2</p>
+                  <p class="text-small m-0 fw-normal">Próximos a vencer</p>
+                  <p class="text-small2 m-0 clr-primary">Vencen en las próximas 24 horas</p>
+                </div>
+              </div>
+              <div class="bg-white border border-2 border-success-subtle border-opacity-10 p-3 rounded-4 col">
+                <i class="bi bi-check-circle fs-5 bg-success bg-opacity-10 text-success d-inline-flex p-2 rounded-3 fw-bolder"></i>
+
+                <div class="flex flex-column mt-3">
+                  <p class="fs-3 ff-zilla mb-0 lh-1 text-success">1</p>
+                  <p class="text-small m-0 fw-normal">Cerrados hoy</p>
+                  <p class="text-small2 m-0 clr-primary">Resueltos en el día</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="container mt-4 bg-white rounded-4 border border-1 border-dark-subtle w-100">
+            <div class="table-resposive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-uppercase">Radicado</th>
+                    <th scope="col" class="text-uppercase">Fecha Rad.</th>
+                    <th scope="col" class="text-uppercase">Tipo</th>
+                    <th scope="col" class="text-uppercase">Servicio</th>
+                    <th scope="col" class="text-uppercase">Categoría</th>
+                    <th scope="col" class="text-uppercase">Subcategoría</th>
+                    <th scope="col" class="text-uppercase">Asociado</th>
+                    <th scope="col" class="text-uppercase">Responsable</th>
+                    <th scope="col" class="text-uppercase">Prioridad</th>
+                    <th scope="col" class="text-uppercase">Estado</th>
+                    <th scope="col" class="text-uppercase">Límite SLA</th>
+                    <th scope="col" class="text-uppercase">Semáforo</th>
+                    <th scope="col" class="text-uppercase">Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 </body>
