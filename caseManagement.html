@@ -84,7 +84,7 @@
 
       </section>
 
-      <section class="d-flex justify-content-center py-4 flex-grow-1">
+      <section class="d-flex justify-content-center py-4 flex-grow-1 main-content px-3">
         <div class="container-xxl mx-3">
           <div class="d-flex justify-content-between align-items-start">
             <div class="d-flex flex-column">
@@ -97,8 +97,8 @@
                 <span class="fs-14 cl-card-text">Exportar</span>
               </button>
               <button class="d-flex justify-content-center align-items-center gap-2 border-1 p-2 px-3 rounded-3 bg-white border border-1 border-dark-subtle">
-                <i class="bi bi-download fs-14 cl-card-text"></i>
-                <span class="fs-14 cl-card-text">Exportar</span>
+                <i class="bi bi-arrow-clockwise fs-14 cl-card-text"></i>
+                <span class="fs-14 cl-card-text">Actualizar</span>
               </button>
             </div>
           </div>
@@ -146,29 +146,153 @@
             </section>
           </div>
 
-          <div class="container mt-4 bg-white rounded-4 border border-1 border-dark-subtle w-100">
-            <div class="table-resposive">
-              <table class="table">
-                <thead>
+           <div class="mt-4 bg-white rounded-4 border border-1 border-dark-subtle w-100 overflow-hidden">
+            <form action="#" class="p-3 d-flex gap-3">
+              <div class="position-relative w-100">
+                <input type="email" class="form-control ps-4 rounded-3 bg-light fs-14" id="exampleFormControlInput1" placeholder="Buscar por radicado o nombre de asociado...">
+                <i class="bi bi-search text-small position-absolute start-0 top-50 translate-middle-y ps-2"></i>
+              </div>
+              <button class="d-flex justify-content-center align-items-center gap-2 border-1 py-1 px-3 rounded-3 bg-white border border-1 border-dark-subtle">
+                <i class="bi bi-funnel fs-14 cl-card-text"></i>
+                <span class="fs-14 cl-card-text">Filtros</span>
+              </button>
+            </form>
+            <div class="table-responsive">
+              <table class="table align-middle mb-0 small">
+                <thead class="border-0 border-bottom border-top border-1 border-dark-subtle">
                   <tr>
-                    <th scope="col" class="text-uppercase">Radicado</th>
-                    <th scope="col" class="text-uppercase">Fecha Rad.</th>
-                    <th scope="col" class="text-uppercase">Tipo</th>
-                    <th scope="col" class="text-uppercase">Servicio</th>
-                    <th scope="col" class="text-uppercase">Categoría</th>
-                    <th scope="col" class="text-uppercase">Subcategoría</th>
-                    <th scope="col" class="text-uppercase">Asociado</th>
-                    <th scope="col" class="text-uppercase">Responsable</th>
-                    <th scope="col" class="text-uppercase">Prioridad</th>
-                    <th scope="col" class="text-uppercase">Estado</th>
-                    <th scope="col" class="text-uppercase">Límite SLA</th>
-                    <th scope="col" class="text-uppercase">Semáforo</th>
-                    <th scope="col" class="text-uppercase">Acción</th>
+                    <th scope="col" class="p-0">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-nowrap text-small2 cl-card-text me-1">Radicado</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0 mw-th">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-nowrap text-small2 cl-card-text me-1">Fecha Rad.</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-nowrap text-small2 cl-card-text me-1">Tipo</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-nowrap text-small2 cl-card-text me-1">Servicio</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0 mw-th">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Categoría</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Subcategoría</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Asociado</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0"> 
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Responsable</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0 mw-th">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Prioridad</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0 mw-th">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Estado</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0 mw-th">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Límite SLA</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0 mw-th">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Semáforo</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
+                    <th scope="col" class="p-0 mw-th">
+                      <button class="bg-transparent border-0 p-0 w-100 table-dash-spacing text-start">
+                        <span class="text-uppercase fw-bold text-small2 cl-card-text me-1">Acción</span>
+                        <i class="bi bi-chevron-down text-small2"></i>
+                      </button>
+                    </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbodyCases">
+                  <!--<tr>
+                    <td class="fw-medium text-nowrap text-small clr-primary">FPQRS-2026-04758</td>
+                    <td class="text-nowrap text-small cl-card-text">07/05/2026</td>
+                    <td class="text-nowrap text-small2"><span class="text-success fw-semibold bg-success p-1 rounded-2 bg-opacity-10">Felicitación</span></td>
+                    <td class="text-nowrap text-small">Atención al Asociado</td>
+                    <td class="text-small text-break">
+                      <span>Atención Presencial</span>
+                    </td>
+                    <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">Felicitación por excelente servicio</td>
+                    <td class="text-nowrap text-small text-truncate" style="max-width:140px">Sandra Milena Aguirre Torres.</td>
+                    <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">Valentina Ospina Ríos</td>
+                    <td class="text-nowrap text-small2"><span class="text-success fw-semibold bg-success p-1 rounded-2 bg-opacity-10">Baja</span></td>
+                    <td class="text-nowrap text-small"><span class="badge  my-badged">Cerrado</span></td>
+                    <td class="text-nowrap text-small cl-card-text">09/05/2026</td>
+                    <td class="text-nowrap text-small"><span class="badge d-inline-flex align-items-center gap-1 my-badged"><span class="rounded-circle bg-secondary d-inline-block" style="width:8px;height:8px"></span>Cerrado</span></td>
+                    <td><button class="btn btn-sm btn-outline-secondary border-0"><i class="bi bi-eye"></i></button></td>
+                  </tr>-->
                 </tbody>
               </table>
+            </div>
+            <div class="p-3 d-flex justify-content-between align-items-center border-bottom border-top border-1 border-dark-subtle">
+              <div class="d-flex align-items-center">
+                <p class="text-small w-100 mb-0 cl-card-text">Mostrando <span class="fw-bold">1–10</span> de <span class="fw-bold">205</span> casos</p>
+                <select class="form-select text-small bs-none" name="select">
+                  <option value="1" class="text-small">10 por página</option>
+                  <option value="2" class="text-small">25 por página</option>
+                  <option value="3" class="text-small">50 por página</option>
+                </select>
+              </div>
+
+              <nav aria-label="..." class="MyPagination">
+                <ul class="pagination m-0">
+                  <li class="page-item">
+                    <a href="#" class="page-link">
+                      <i class="bi bi-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#" aria-current="page">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
@@ -177,5 +301,5 @@
 </body>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js" type="module"></script>
 </html>
