@@ -84,6 +84,12 @@ body{
   text-decoration: underline;
 }
 /* Management */
+.Management-left-bar{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-self: flex-start;
+}
 .Management-left-bar__content-logo img { width: 32px; }
 .Management-left-bar__content .btn-float { width: 25px; height: 25px; }
 .Management-left-bar__content .btn-float i{line-height: 0;}
@@ -130,9 +136,14 @@ body{
 .MyPagination ul li a:hover{color: #1e3a5f !important;background-color: transparent;}
 .MyPagination ul li.active a{
   border: 1px solid #1e3a5f47;
-  color: #FFF;
+  color: #FFF !important;
   background-color: #1e3a5f;
 }
+.bg-gestion{background-color: #fff3e0;color: #e65100;}
+.bg-asignado{background-color: #f3e5f5;color: #6a1b9a;}
+.badged-pending{background-color: #fffde7; color: #f9a825;}
+.badged-queja{background-color: #fff7ed;color: #c2410c;}
+
 /*
 ESTILOS APLICADOS A SCROLL EN EL NAVIGATION DEL DASHBOARD
 max-height: 100vh;

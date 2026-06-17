@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GestorFPQRS - Gestión de Casos Financieros</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/index.css" />
+</head>
+<body>
+  <div class="container-fluid p-0">
+
+    <div class="w-100 min-vh-100 d-flex justify-content-between align-items-stretch">
+      <aside class="Management-left-bar py-4 text-white d-none d-lg-flex flex-column flex-shrink-0 bg-clr-primary">
+        <div class="Management-left-bar__content d-flex align-items-center gap-2 border-bottom border-1 border-white border-opacity-10 w-100 px-3 pb-3 position-relative">
+          <figure class="m-0 Management-left-bar__content-logo">
+            <img src="./assets/images/logo.webp" alt="Logo" />
+          </figure>
+          <p class="m-0 ms-1 fw-bold hide-nav-child">GestorFPQRS</p>
+
+          <button type="button"  id="btnMenuAction" class="bg-white border border-1 border-dark-subtle rounded-circle position-absolute top-0 start-100 translate-middle d-flex justify-content-center align-items-center btn-float mt-3">
+            <i class="bi bi-chevron-right text-small2"></i>
+          </button>
+        </div>
+
+        <div class="Management-left-bar__menu p-2 py-3">
+          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 mt-0 hide-nav-child">Operación</p>
+          <nav class="navigation d-flex flex-column gap-1">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3 bg-white bg-opacity-25">
+              <i class="bi bi-folder2-open ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Bandeja de entrada</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-file-earmark-text ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Detalle de Caso</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-list-check ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Registrar FPQRS</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-plus-square ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Crear Caso (Operador)</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-bar-chart ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Métricas</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-graph-up-arrow ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Analítica</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-download ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Exportar Casos</span>
+            </a>
+          </nav>
+        </div>
+        <div class="Management-left-bar__menu p-2 pt-0">
+          <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 mt-0 hide-nav-child">Administración</p>
+          <nav class="navigation d-flex flex-column gap-1">
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-shield-check ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Auditoría</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-gear ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Parametrización</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-flask ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Parámetros Alt.</span>
+            </a>
+            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+              <i class="bi bi-book ms-1 fs-5"></i>
+              <span  class="pe-3 hide-nav-child">Modelo Cat. Resp.</span>
+            </a>
+          </nav>
+        </div>
+
+      </aside>
+
+      <main class="d-flex justify-content-start align-items-start flex-column py-4 flex-grow-1 main-content px-3">
+        <header class="container-xxl d-flex justify-content-between align-items-start">
+          <div class="">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb align-items-start mb-2">
+                <li class="breadcrumb-item d-flex"><a href="#" class="text-decoration-none text-small cl-card-text"><i class="bi bi-chevron-left text-small2 me-1"></i> Bandeja de Casos</a></li>
+                <li class="breadcrumb-item active text-small clr-primary" aria-current="page">FPQRS-2026-04779</li>
+              </ol>
+            </nav>
+            <div class="d-flex align-items-center gap-2">
+              <h3 class="text-blue-black fw-normal mb-0 fs-4 text-uppercase">FPQRS-2026-04779</h3>
+              <p class="badged-pending px-2 rounded-4 m-0 bg-opacity-10 text-small">Pendiente de Información</p>
+              <p class="badged-queja px-2 rounded-4 m-0 bg-opacity-10 text-small">Queja</p>
+              <span class="text-small text-danger fw-semibold bg-danger px-2 rounded-4 bg-opacity-10 d-flex align-items-center">
+                <span class="rounded-circle bg-danger d-inline-block me-1" style="width:6px;height:6px"></span>
+                Vencido
+              </span>
+            </div>
+            <p class="text-small cl-card-text mt-1">Radicado el 04/05/2026 18:00 · Canal: App Móvil</p>
+          </div>
+          <button class="d-flex justify-content-center align-items-center gap-2 border-1 p-2 px-3 rounded-4 bg-transparent border border-1 border-dark-subtle">
+            <i class="bi bi-person-check-fill fs-14 cl-card-text"></i>
+            <span class="fs-14 cl-card-text">Reasignar</span>
+          </button>
+        </header>
+        <div class="container-xxl">
+          <div class="alert alert-danger d-flex align-items-center justify-content-start w-100 rounded-4 p-3 " role="alert">
+            <i class="bi bi-exclamation-triangle fs-6 fw-bold text-danger pe-3"></i>
+            <div>
+              <p class="mb-0 fs-14 text-danger-emphasis">SLA vencido — Atención urgente requerida</p>
+              <p class="mb-0 text-small text-danger">La fecha límite de respuesta fue 05/05/2026 03:00. Este caso requiere acción inmediata.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-xxl">
+          <div class="row justify-content-center g-4">
+            <div class="col-8">
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle">
+                <div class="d-flex align-items-center gap-2 p-3 pb-2 border-bottom border-1 border-secondary-subtle">
+                  <i class="bi bi-person"></i>
+                  <p class="m-0 fs-14">Datos del Asociado</p>
+                </div>
+                <div class="p-3 pt-2">
+                  <div class="row mt-2">
+                    <div class="col d-flex flex-column gap-3">
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Nombre</p>
+                        <p class="fs-14 mb-0 text-blue-black">Jorge Luis Patiño Restrepo</p>
+                      </div>
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Celular</p>
+                        <p class="fs-14 mb-0 text-blue-black">3209876543</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex flex-column gap-3">
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Identificación</p>
+                        <p class="fs-14 mb-0 text-blue-black">CC 71456023</p>
+                      </div>
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Dirección</p>
+                        <p class="fs-14 mb-0 text-blue-black">Av El Poblado #12-45, Medellín</p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Correo</p>
+                        <p class="fs-14 mb-0 text-blue-black">jl.patino@empresa.com.co</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle mt-4">
+                <div class="d-flex align-items-center gap-2 p-3 pb-2 border-bottom border-1 border-secondary-subtle">
+                  <i class="bi bi-suitcase-lg"></i>
+                  <p class="m-0 fs-14">Datos del Caso</p>
+                </div>
+                <div class="p-3 pt-2">
+                  <div class="row mt-2">
+                    <div class="col d-flex flex-column gap-3">
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Servicio</p>
+                        <p class="fs-14 mb-0 text-blue-black">Pagos y Transferencias</p>
+                      </div>
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Responsable</p>
+                        <p class="fs-14 mb-0 text-blue-black">Rodrigo Esteban Muñoz</p>
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Operaciones Financieras</p>
+                      </div>
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Fecha lìmite SLA</p>
+                        <p class="fs-14 mb-0 text-danger">05/05/2026 03:00</p>
+                      </div>
+                    </div>
+                    <div class="col d-flex flex-column gap-3">
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Categoría</p>
+                        <p class="fs-14 mb-0 text-blue-black">Pago PSE</p>
+                      </div>
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Prioridad</p>
+                        <span class="text-small text-danger fw-semibold bg-danger py-1 px-2 rounded-4 bg-opacity-10 ">
+                          Crítica
+                        </span>
+                      </div>
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Tipo de Causa</p>
+                        <p class="fs-14 mb-0 text-blue-black">Falla en pasarela de pago PSE</p>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">Subcategoría</p>
+                        <p class="fs-14 mb-0 text-blue-black">Pago PSE no acreditado en destino</p>
+                      </div>
+                      <div class="data-name">
+                        <p class="text-uppercase text-small2 cl-card-text mb-1">SLA aplicado</p>
+                        <p class="fs-14 mb-0 text-blue-black">4h</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="bg-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad mollitia rerum unde sit recusandae quos, perferendis temporibus repellat odit exercitationem voluptatibus deserunt doloremque minus sequi facere atque tempore sint beatae.</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+</body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js" type="module"></script>
+</html>
