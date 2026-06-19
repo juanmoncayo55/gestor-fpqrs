@@ -1,11 +1,11 @@
 import { data as casesFPQRS } from "../../data/index.js";
+
 $(window).on("load", function(){
-  $("#btnMenuAction").on("click", () => {
-    $(".hide-nav-child").toggle({
-      "visibility": "hidden",
-      "display": "none"
-    })
-  })
+
+  const tbodyCases = document.querySelector("#tbodyCases");
+
+  const tabsFpqrsDetails = document.querySelectorAll("[data-tab]");
+  const tabContents = document.querySelectorAll("#contentTab > div");
 
   function styleType(value){
     switch(value){
@@ -95,36 +95,56 @@ $(window).on("load", function(){
     }
   }
 
-  const tbodyCases = document.querySelector("#tbodyCases");
+  
 
-  casesFPQRS.slice(0,99).map(casePqrs => {
-    tbodyCases.innerHTML += `
-      <tr>
-        <td class="fw-medium text-nowrap text-small clr-primary">${casePqrs.id}</td>
-        <td class="text-nowrap text-small cl-card-text">${casePqrs.date}</td>
-        <td class="text-nowrap text-small2"><span class="${styleType(casePqrs.type)}">${casePqrs.type}</span></td>
-        <td class="text-nowrap text-small">${casePqrs.category}</td>
-        <td class="text-small text-break">
-          <span>${casePqrs.subcategory}</span>
-        </td>
-        <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">${casePqrs.description}</td>
-        <td class="text-nowrap text-small text-truncate" style="max-width:140px">${casePqrs.client}</td>
-        <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">${casePqrs.assignedTo}</td>
-        <td class="text-nowrap text-small2"><span class="${stylePriority(casePqrs.priority)}">${casePqrs.priority}</span></td>
-        <td class="text-nowrap text-small"><span class="${styleStatus(casePqrs.status)}">${casePqrs.status}</span></td>
-        <td class="text-nowrap text-small ${filterDate(casePqrs.dueDate)}">${casePqrs.dueDate}</td>
-        <td class="text-nowrap text-small">
-          <span class="${styleSemaforo(casePqrs.slaStatus)}">
-            <span class="rounded-circle bg-secondary d-inline-block" style="width:8px;height:8px"></span>
-            ${casePqrs.slaStatus}
-          </span>
-        </td>
+  $("#btnMenuAction").on("click", () => {
+    $(".hide-nav-child").toggle({
+      "visibility": "hidden",
+      "display": "none"
+    })
+  })
 
-        <td>
-          <button class="border-0 bg-transparent text-body-secondary text-opacity-10"><i class="bi bi-eye"></i></button>
-        </td>
-      </tr>
-    `
+  tabsFpqrsDetails.forEach(tab => {
+    tab.addEventListener("click", (e) => {
+      const select = e.currentTarget.dataset.tab;
+
+      tabContents.forEach(content => content.classList.add("d-none"));
+      document.querySelector(`#${select}`).classList.remove("d-none");
+
+      tabsFpqrsDetails.forEach(t => t.classList.remove("btn-tab-active"));
+      e.currentTarget.classList.add("btn-tab-active");
+    });
   });
-
+  
+  if(tbodyCases !== null){
+    casesFPQRS.slice(0,99).map(casePqrs => {
+      tbodyCases.innerHTML += `
+        <tr>
+          <td class="fw-medium text-nowrap text-small clr-primary">${casePqrs.id}</td>
+          <td class="text-nowrap text-small cl-card-text">${casePqrs.date}</td>
+          <td class="text-nowrap text-small2"><span class="${styleType(casePqrs.type)}">${casePqrs.type}</span></td>
+          <td class="text-nowrap text-small">${casePqrs.category}</td>
+          <td class="text-small text-break">
+            <span>${casePqrs.subcategory}</span>
+          </td>
+          <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">${casePqrs.description}</td>
+          <td class="text-nowrap text-small text-truncate" style="max-width:140px">${casePqrs.client}</td>
+          <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">${casePqrs.assignedTo}</td>
+          <td class="text-nowrap text-small2"><span class="${stylePriority(casePqrs.priority)}">${casePqrs.priority}</span></td>
+          <td class="text-nowrap text-small"><span class="${styleStatus(casePqrs.status)}">${casePqrs.status}</span></td>
+          <td class="text-nowrap text-small ${filterDate(casePqrs.dueDate)}">${casePqrs.dueDate}</td>
+          <td class="text-nowrap text-small">
+            <span class="${styleSemaforo(casePqrs.slaStatus)}">
+              <span class="rounded-circle bg-secondary d-inline-block" style="width:8px;height:8px"></span>
+              ${casePqrs.slaStatus}
+            </span>
+          </td>
+  
+          <td>
+            <button class="border-0 bg-transparent text-body-secondary text-opacity-10"><i class="bi bi-eye"></i></button>
+          </td>
+        </tr>
+      `
+    });
+  }
 });

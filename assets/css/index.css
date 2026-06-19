@@ -5,6 +5,52 @@
   --text-blue-black: #0f1c2e;
   --card-background: #64748b;
   --card-background-secondary: #e8eef5;
+
+  --blue: #2563eb;
+  --blue-30Op: #eff6ff;
+  --blue-border:#bfdbfe;
+
+  --cyan: #0284c7;
+  --cyan50: #f0f9ff;
+  --cyan-border: #bae6fd;
+
+  --violet: #7c3aed;
+  --violet-30Op: #EDE9FE;
+  --purple: #9333ea;
+  --purple-30Op:#faf5ff;
+  --purple-border: #e9d5ff;
+
+  --orange: #f59e0b;
+  --orange-30Op: #FFFBEB;
+  --orange-border: #FDE68A;
+
+  --esmerald: #059669;
+  --esmerald-text:#047857;
+  --esmerald-30Op: #ECFDF5;
+  --esmerald-border: #a7f3d0;
+  --esmerald-bottom: #d1fae5;
+  
+  --slate: #475569;
+  --slate30Op: #F8FAFC;
+  --slate-border: #e2e8f0;
+
+  --indigo: #4f46e5;
+  --indigo30Op: #EEF2FF;
+  --indigo-border: #c7d2fe;
+
+  --cyan2: #0891b2;
+  --cyan2-30Op: #ECFEFF;
+  --border-cyan2: #a5f3fc;
+
+  --teal: #0d9488;
+  --teal-30Op: #F0FDFA;
+  --border-teal: #99f6e4;
+  --teal-light: #ccfbf1;
+
+  --amber: #d97706;
+  --amber-30Op: #FEF3C7;
+  --border-amber: #fcd34d;
+  --amber-text: #b45309;
 }
 
 body{
@@ -107,6 +153,7 @@ body{
 .ff-zilla{font-family: 'Zilla Slab', serif;font-variant-numeric: lining-nums;letter-spacing: 2px;}
 .dot-danger{top: 10%; right: 6%;}
 .fs-14{font-size: 14px;}
+.fs-11{font-size: 11px;}
 .main-content {
   min-width: 0;
   overflow-x: hidden;
@@ -143,6 +190,103 @@ body{
 .bg-asignado{background-color: #f3e5f5;color: #6a1b9a;}
 .badged-pending{background-color: #fffde7; color: #f9a825;}
 .badged-queja{background-color: #fff7ed;color: #c2410c;}
+.bg-opac-esmerald{background-color: #ecfdf5;}
+.bg-esmerald{background-color: #a7f3d0;}
+.border-esmerald{border: 1px solid #a7f3d0;}
+.btnTab{
+  transition: .2s all ease;
+}
+.btn-tab-active{
+  border-bottom: 2px solid var(--clr-primary) !important;
+}
+.btn-tab-active > *, .btnTab:hover > *{ color: var(--clr-primary) !important; }
+.avatar-name{width: 27px; height: 27px;}
+.avatar-name2{width: 32px; height: 32px;}
+.letter-min-name{width: 15px; height: 15px;}
+.select-small{
+  padding-right: 0;
+  line-height: 0;
+  height: 30px;
+  max-width: 180px;
+  width: 100%;
+}
+.btn-w-icon{
+  max-width: 188px;
+  width: 100%;
+}
+.icon-cnt-adj{
+  line-height: 0;
+  height: 38px;
+  width: 38px;
+}
+
+.bg--blue{ background-color: var(--blue); }
+.bg--blue2{ background-color: var(--blue-border); }
+.color--blue{ color: var(--blue); }
+.blue-30Op{ background-color: var(--blue-30Op); }
+.border-blue{ border: 1px solid var(--blue-border) }
+
+.bg--cyan{ background-color: var(--cyan); }
+.color--cyan{ color: var(--cyan); }
+.bg-50Op{ background-color: var(--cyan50); }
+.border-cyan{ border: 1px solid var(--cyan-border); }
+
+
+.bg--violet{ background-color: var(--violet); }
+.violet-30Op{background-color: var(--violet-30Op);}
+
+
+.bg--purple{ background-color: var(--purple); }
+.color--purple{color: var(--purple);}
+.purple-30Op{ background-color: var(--purple-30Op); }
+.border-purple{ border: 1px solid var(--purple-border); }
+.bg--purple2{background-color: var(--purple-border);}
+
+.bg--orange{ background-color: var(--orange); }
+.color-orange{ color: var(--orange); }
+.orange-30Op{ background-color: var(--orange-30Op); }
+.border-orange{border: 1px solid var(--orange-border);}
+.bg--orange2{ background-color: var(--orange-border); }
+
+.bg--esmerald{ background-color: var(--esmerald); }
+.color-esmerald{color:var( --esmerald-text);}
+.bg--esmerald-bottom{ background-color: var(--esmerald-bottom); }
+.esmerald-30Op{ background-color: var(--esmerald-30Op); }
+.border-esmerald{ border: 1px solid var(--esmerald-border); }
+.bg--esmerald2{background-color: var(--esmerald-border);}
+
+
+.bg--slate{ background-color: var(--slate); }
+.color-slate{ color: var(--slate); }
+.slate-30Op{ background-color: var(--slate30Op); }
+.border-slate{ border: 1px solid var(--slate-border) }
+.bg-slate2{ background-color: var(--slate-border); }
+
+.bg-indigo{ background-color: var(--indigo); }
+.color-indigo{ color: var(--indigo); }
+.indigo-30Op{ background-color: var(--indigo30Op); }
+.border-indigo{ border: 1px solid var(--indigo-border); }
+.bg-indigo2{ background-color: var(--indigo-border); }
+
+.bg--cyan2{ background-color: var(--cyan2); }
+.color-cyan2{ color: var(--cyan2) }
+.cyan2-30Op{ background-color: var(--cyan2-30Op); }
+.border-cyan2{ border: 1px solid var(--border-cyan2); }
+.bg-cyan2{ background-color: var(--border-cyan2); }
+.cyan2-bold{ color: #155e75; }
+
+.bg--teal{ background-color: var(--teal); }
+.color-teal{ color: var(--teal); }
+.teal-30Op{ background-color: var(--teal-30Op); }
+.border-teal{ border: 1px solid var(--border-teal); }
+.bg-teal2{ background-color: var(--border-teal); }
+.teal-bold{color: #115e59;}
+.teal-light{ background-color: var(--teal-light); }
+
+.bg--amber{ background-color: var(--amber); }
+.border-amber{ border: 1px solid var(--border-amber); }
+.amber-30Op{ background-color: var(--amber-30Op); }
+.amber-text{ color: var(--amber-text); }
 
 /*
 ESTILOS APLICADOS A SCROLL EN EL NAVIGATION DEL DASHBOARD

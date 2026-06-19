@@ -210,10 +210,940 @@
                   </div>
                 </div>
               </div>
+
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle mt-4">
+                <div class="p-2 px-3 d-flex gap-4 overflow-x-auto border-bottom border-1 border-secondary-subtle">
+                  <button class="border-0 border-bottom border-2 border-white py-2 bg-transparent d-flex align-items-center gap-2 btn-tab-active outline-0 btnTab" data-tab="description">
+                    <i class="bi bi-file-earmark-text cl-card-text"></i>
+                    <span class="fs-14 cl-card-text">Descripción</span>
+                    <span class="text-small2 ms-2">11</span>
+                  </button>
+                  <button class="border-0 border-bottom border-2 border-white py-2 bg-transparent d-flex align-items-center gap-2 outline-0 btnTab" data-tab="comments">
+                    <i class="bi bi-chat-left cl-card-text"></i>
+                    <span class="fs-14 cl-card-text">Comentarios</span>
+                    <span class="text-small2 ms-2">11</span>
+                  </button>
+                  <button class="border-0 border-bottom border-2 border-white py-2 bg-transparent d-flex align-items-center gap-2 outline-0 btnTab" data-tab="clip">
+                    <i class="bi bi-paperclip cl-card-text"></i>
+                    <span class="fs-14 cl-card-text">Adjuntos</span>
+                    <span class="text-small2 ms-2">11</span>
+                  </button>
+                  <button class="border-0 border-bottom border-2 border-white py-2 bg-transparent d-flex align-items-center gap-2 outline-0 btnTab" data-tab="history">
+                    <i class="bi bi-clock-history cl-card-text"></i>
+                    <span class="fs-14 cl-card-text">Historial</span>
+                    <span class="text-small2 ms-2">11</span>
+                  </button>
+                  <button class="border-0 border-bottom border-2 border-white py-2 bg-transparent d-flex align-items-center gap-2 outline-0 btnTab" data-tab="response">
+                    <i class="bi bi-chat-left cl-card-text"></i>
+                    <span class="fs-14 cl-card-text">Respuestas</span>
+                    <span class="text-small2 ms-2">11</span>
+                  </button>
+                </div>
+
+                <section id="contentTab" class="p-3">
+                  <div id="description" class="d-none">
+                    <p class="cl-card-text text-uppercase text-small">Descripción del caso</p>
+                    <div class="p-3">
+                      <p class="mb-0 fs-14">Pago PSE por $2.350.000 al banco Davivienda no fue acreditado. Código: PSE-20260503-8847.</p>
+                    </div>
+                  </div>
+                  <div id="comments" class="d-none">
+                    <div class="d-flex justify-content-between py-2 px-2 pb-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-chat-left clr-primary fs-14"></i>
+                        <span class="fs-14 clr-primary">Comentarios</span>
+                        <span class="text-small2">3</span>
+                      </div>
+
+                      <div class="d-flex gap-2">
+                        <div class="d-flex gap-1">
+                          <button class="bg-white border-0 rounded-2 text-small2 cl-card-text px-2">Todos</button>
+                          <button class="bg-white border-0 rounded-2 text-small2 cl-card-text px-2">Interno</button>
+                          <button class="bg-white border-0 rounded-2 text-small2 cl-card-text px-2">Visibles</button>
+                        </div>
+                        <button class="border-0 bg-clr-primary py-1 px-3 rounded-4 text-white text-small">
+                          <i class="bi bi-plus-lg"></i>
+                          <span class="ms-1">Agregar comentario</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="py-2 px-3 rounded-4 border border-1 border-secondary-subtle bg-light mb-3">
+                      <div class="d-flex align-items-start gap-2">
+                        <span class="rounded-circle text-small bg-secondary bg-opacity-25 p-0 ratio-1x1 avatar-name d-flex align-items-center justify-content-center">J</span>
+                        <div class="d-flex flex-column">
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="text-small text-blue-black mb-0">Jorge Iván Castillo</p>
+                            <span class="text-small2 bg-secondary px-2 py-0 rounded-4 bg-opacity-10 d-flex align-items-center text-blue-black">
+                              <i class="bi bi-lock d-inline-block me-1"></i>
+                              Interno
+                            </span>
+                          </div>
+                          <div class="d-flex gap-2">
+                            <p class="text-small2 text-blue-black mb-0"><i class="bi bi-clock d-inline-block me-1"></i> 04/05/2026 18:50</p>
+                            <p class="text-small2 text-blue-black mb-0">· IP: 190.24.135.78</p>
+                          </div>
+                        </div>
+
+                        <button class="bg-transparent p-0 border-0 ms-auto">
+                          <i class="bi bi-chevron-up text-small2"></i>
+                        </button>
+                      </div>
+
+                      <div class="bg-white rounded-4 p-2 border border-1 border-secondary-subtle mt-3">
+                        <p class="mb-0 fs-14 p-1">Se solicita validación al área de cartera sobre el estado de la transacción PSE. El débito fue aplicado pero no se refleja acreditación en el banco destino.</p>
+                      </div>
+                    </div>
+                    <div class="py-2 px-3 rounded-4 bg-opac-esmerald border-esmerald mb-3">
+                      <div class="d-flex align-items-start gap-2">
+                        <span class="rounded-circle text-small bg-esmerald p-0 ratio-1x1 avatar-name d-flex align-items-center justify-content-center">J</span>
+                        <div class="d-flex flex-column">
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="text-small text-blue-black mb-0">Jorge Iván Castillo</p>
+                            <span class="text-small2 bg-esmerald px-2 py-0 rounded-4  d-flex align-items-center text-blue-black">
+                              <i class="bi bi-eye d-inline-block me-1"></i>
+                              Visible al asociado
+                            </span>
+                          </div>
+                          <div class="d-flex gap-2">
+                            <p class="text-small2 text-blue-black mb-0"><i class="bi bi-clock d-inline-block me-1"></i> 04/05/2026 20:20</p>
+                            <p class="text-small2 text-blue-black mb-0">· IP: 190.24.135.78</p>
+                          </div>
+                        </div>
+
+                        <button class="bg-transparent p-0 border-0 ms-auto">
+                          <i class="bi bi-chevron-up text-small2"></i>
+                        </button>
+                      </div>
+
+                      <div class="bg-white rounded-4 p-2 border-esmerald mt-3">
+                        <p class="mb-0 fs-14 p-1">Estimado asociado, hemos recibido su caso y estamos gestionando la verificación del pago PSE con la pasarela correspondiente. Le informaremos en un plazo máximo de 24 horas.</p>
+                      </div>
+                    </div>
+                    <div class="py-2 px-3 rounded-4 border border-1 border-secondary-subtle bg-light mb-3">
+                      <div class="d-flex align-items-start gap-2">
+                        <span class="rounded-circle text-small bg-secondary bg-opacity-25 p-0 ratio-1x1 avatar-name d-flex align-items-center justify-content-center">J</span>
+                        <div class="d-flex flex-column">
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="text-small text-blue-black mb-0">Jorge Iván Castillo</p>
+                            <span class="text-small2 bg-secondary px-2 py-0 rounded-4 bg-opacity-10 d-flex align-items-center text-blue-black">
+                              <i class="bi bi-lock d-inline-block me-1"></i>
+                              Interno
+                            </span>
+                          </div>
+                          <div class="d-flex gap-2">
+                            <p class="text-small2 text-blue-black mb-0"><i class="bi bi-clock d-inline-block me-1"></i> 04/05/2026 18:50</p>
+                            <p class="text-small2 text-blue-black mb-0">· IP: 190.24.135.78</p>
+                          </div>
+                        </div>
+
+                        <button class="bg-transparent p-0 border-0 ms-auto">
+                          <i class="bi bi-chevron-up text-small2"></i>
+                        </button>
+                      </div>
+
+                      <div class="bg-white rounded-4 p-2 border border-1 border-secondary-subtle mt-3">
+                        <p class="mb-0 fs-14 p-1">Se solicita validación al área de cartera sobre el estado de la transacción PSE. El débito fue aplicado pero no se refleja acreditación en el banco destino.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="clip" class="d-none">
+                    <div class="d-flex justify-content-between py-1 px-2 pb-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-paperclip clr-primary fs-14"></i>
+                        <span class="fs-14 clr-primary">Adjuntos</span>
+                        <span class="text-small2">3</span>
+                      </div>
+
+                      <div class="d-flex gap-2">
+                        <select class="form-select text-small bs-none select-small" name="select">
+                          <option value="1" class="text-small">Todos los tipos</option>
+                          <option value="2" class="text-small">Registro inicial</option>
+                          <option value="3" class="text-small">Gestión interna</option>
+                          <option value="3" class="text-small">Cierre</option>
+                          <option value="3" class="text-small">Respuesta al asociado</option>
+                        </select>
+                        <button class="border-0 bg-clr-primary py-1 px-3 rounded-4 text-white text-small btn-w-icon">
+                          <i class="bi bi-plus-lg"></i>
+                          <span class="ms-1">Cargar adjuntos</span>
+                        </button>
+                      </div>
+
+                    </div>
+
+                    <div class="d-flex flex-column">
+                      <div class="rounded-4 border border-1 border-secondary-subtle px-3 py-2 d-flex gap-3 align-items-center mb-2">
+                        <span class="p-2 ratio-1x1 rounded-3 clr-primary d-flex justify-content-center align-items-center icon-cnt-adj">
+                          <i class="bi bi-file-earmark-text"></i>
+                        </span>
+                        <div class="d-flex flex-column ">
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="fs-14 clr-primary mb-0">comprobante_pse_20260503.pdf</p>
+                            <span class="text-primary bg-primary p-1 rounded-3 text-small2 bg-opacity-10">Registro inicial</span>
+                            <span class="text-small2 bg-secondary px-2 py-0 rounded-4 bg-opacity-10 d-flex align-items-center text-blue-black">
+                              <i class="bi bi-eye-slash d-inline-block me-1"></i>
+                              Interno
+                            </span>
+                          </div>
+                          <div class="d-flex gap-2">
+                            <p class="text-small2 cl-card-text mb-0">245.0 KB</p>
+                            <p class="text-small2 cl-card-text mb-0 text-uppercase">.pdf</p>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 19:05</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="rounded-4 border border-1 border-secondary-subtle px-3 py-2 d-flex gap-3 align-items-center mb-2">
+                        <span class="bg-info-subtle p-2 ratio-1x1 rounded-3 clr-primary d-flex justify-content-center align-items-center icon-cnt-adj">
+                          <i class="bi bi-file-earmark-text"></i>
+                        </span>
+                        <div class="d-flex flex-column ">
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="fs-14 clr-primary mb-0">captura_transaccion.png</p>
+                            <span class="text-primary bg-primary p-1 rounded-3 text-small2 bg-opacity-10">Registro inicial</span>
+                            <span class="text-small2 bg-secondary px-2 py-0 rounded-4 bg-opacity-10 d-flex align-items-center text-blue-black">
+                              <i class="bi bi-eye-slash d-inline-block me-1"></i>
+                              Interno
+                            </span>
+                          </div>
+                          <div class="d-flex gap-2">
+                            <p class="text-small2 cl-card-text mb-0">245.0 KB</p>
+                            <p class="text-small2 cl-card-text mb-0 text-uppercase">.pdf</p>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 19:05</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="rounded-4 border border-1 border-secondary-subtle px-3 py-2 d-flex gap-3 align-items-center mb-2">
+                        <span class="p-2 ratio-1x1 rounded-3 clr-primary d-flex justify-content-center align-items-center icon-cnt-adj">
+                          <i class="bi bi-file-earmark-text"></i>
+                        </span>
+                        <div class="d-flex flex-column ">
+                          <div class="d-flex align-items-center gap-2">
+                            <p class="fs-14 clr-primary mb-0">respuesta_pse_interbancaria.pdf</p>
+                            <span class="text-primary bg-primary p-1 rounded-3 text-small2 bg-opacity-10">Registro inicial</span>
+                            <span class="text-small2 bg-secondary px-2 py-0 rounded-4 bg-opacity-10 d-flex align-items-center text-blue-black">
+                              <i class="bi bi-eye-slash d-inline-block me-1"></i>
+                              Interno
+                            </span>
+                          </div>
+                          <div class="d-flex gap-2">
+                            <p class="text-small2 cl-card-text mb-0">245.0 KB</p>
+                            <p class="text-small2 cl-card-text mb-0 text-uppercase">.pdf</p>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 19:05</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="history" class="">
+                    <div class="d-flex flex-column justify-content-between py-1 px-2 pb-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-clock clr-primary fs-14"></i>
+                        <span class="fs-14 clr-primary">Línea de tiempo del caso</span>
+                      </div>
+
+                      <p class="text-small cl-card-text mb-0">19 eventos registrados · Solo lectura</p>
+
+                      <div class="mt-2 d-flex gap-1 flex-wrap">
+                        <span class="text-white bg--blue p-1 px-2 rounded-4 text-small2">1 creación</span>
+                        <span class="text-white bg--cyan p-1 px-2 rounded-4 text-small2">1 asignación</span>
+                        <span class="text-white bg--violet p-1 px-2 rounded-4 text-small2">2 estado</span>
+                        <span class="text-white bg--purple p-1 px-2 rounded-4 text-small2">2 reasignación</span>
+                        <span class="text-white bg--orange p-1 px-2 rounded-4 text-small2">1 prioridad</span>
+                        <span class="text-white bg--esmerald p-1 px-2 rounded-4 text-small2">1 respuesta</span>
+                        <span class="text-white bg--slate p-1 px-2 rounded-4 text-small2">2 observación</span>
+
+                        <span class="text-white bg-indigo p-1 px-2 rounded-4 text-small2">3 comentario</span>
+                        <span class="text-white bg--cyan2 p-1 px-2 rounded-4 text-small2">2 adjunto (inicial)</span>
+                        <span class="text-white bg--teal p-1 px-2 rounded-4 text-small2">3 adjunto cargado</span>
+                        <span class="text-white bg--amber p-1 px-2 rounded-4 text-small2">1 modif. cierre</span>
+                      
+                      </div>
+                      <!-- Card 1 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center purple-30Op border-purple">
+                            <i class="bi bi-person-check-fill color--purple"></i>
+                          </span>
+                        </div>
+
+                        <div class="purple-30Op rounded-4 border-purple w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-white bg--purple p-1 px-2 rounded-4 text-small2">Reasignación de caso</span>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 17:55</p>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <p class="cl-card-text bg-white p-1 px-2 rounded-4 fs-11 mb-0 border-purple d-flex">
+                              <span class="rounded-circle text-small2 bg--purple2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-2 color--purple">J</span>
+                              <span class="text-decoration-line-through">Jorge Iván Castillo</span>
+                            </p>
+                            <i class="bi bi-arrow-right-short color--purple text-opacity-10"></i>
+                            <p class="cl-card-text b p-1 px-2 rounded-4 fs-11 mb-0 border-purple d-flex">
+                              <span class="rounded-circle text-small2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-2 text-white bg--purple">J</span>
+                              <span>Rodrigo Esteban Muñoz</span>
+                            </p>
+                          </div>
+                          <p class="mt-2 text-small mb-0"><span class="color--purple">Comentario:</span> Reasignado al especialista de pagos electrónicos por tratarse de un caso PSE crítico.</p>
+
+                          <p class="fs-11 mb-0 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle bg--purple2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color--purple">R</span>
+                            <span class="">Ricardo Peña Montoya &nbsp;</span>
+                            <span class="fs-11 cl-card-text">· Supervisor</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 1 -->
+
+                      <!-- Card 2 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center blue-30Op border-blue">
+                            <i class="bi bi-plus-circle color--blue"></i>
+                          </span>
+                        </div>
+
+                        <div class="blue-30Op rounded-4 border-blue w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-white bg--blue p-1 px-2 rounded-4 text-small2">Caso creado</span>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 18:00</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Caso radicado por el asociado a través del canal App Móvil. Pago PSE por $2.350.000 al banco Davivienda no fue acreditado. Código de transacción: PSE-20260503-8847</p>
+
+                          <p class="fs-11 mb-0 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle bg--blue2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color--blue">R</span>
+                            <span class="">Valentina Ospina Ríos &nbsp;</span>
+                            <span class="fs-11 cl-card-text">· Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 2 -->
+
+                      <!-- Card 3 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center violet-30Op border-purple">
+                            <i class="bi bi-bezier color--purple"></i>
+                          </span>
+                        </div>
+
+                        <div class="bg-white rounded-4 border border-1 border-secondary-subtle w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--violet py-1 px-2 rounded-4 fs-11 me-2">Cambio de estado</span>
+                              <div class="d-flex gap-1 align-items-center">
+                                <p class="cl-card-text bg-body-tertiary py-0 px-2 rounded-4 fs-11 mb-0 d-flex border border-dark-subtle border-1">
+                                  Radicado
+                                </p>
+                                <i class="bi bi-arrow-right-short text-secondary text-opacity-10"></i>
+                                <p class="color--blue py-0 px-2 rounded-4 fs-11 mb-0 blue-30Op border-blue d-flex">
+                                  Asignado
+                                </p>
+                              </div>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 18:01</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Caso crítico PSE. Asignado con prioridad máxima.</p>
+
+                          <p class="fs-11 mb-0 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color--blue">J</span>
+                            <span class="fs-11">Jorge Iván Castillo · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 3 -->
+
+                      <!-- Card 4 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center bg-50Op border-cyan">
+                            <i class="bi bi-person-check-fill color--cyan"></i>
+                          </span>
+                        </div>
+
+                        <div class="bg-50Op rounded-4 border-cyan w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-white bg--cyan py-1 px-2 rounded-4 text-small2">Asignación inicial</span>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 18:01</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Caso asignado automáticamente al responsable de Operaciones Financieras según la categoría Pago PSE.</p>
+
+                          <p class="fs-11 mb-0 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle bg--blue2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color--blue">J</span>
+                            <span class="">Jorge Iván Castillo</span>
+                          </p>
+                          <p class="fs-11 mb-0 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle bg--blue2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color--blue">R</span>
+                            <span class="">Ricardo Peña Montoya &nbsp;</span>
+                            <span class="fs-11 cl-card-text">· Supervisor</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 4 -->
+
+                      <!-- Card 5 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center orange-30Op border-orange">
+                            <i class="bi bi-graph-up color-orange"></i>
+                          </span>
+                        </div>
+
+                        <div class="orange-30Op rounded-4 border-orange w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-white bg--orange p-1 px-2 rounded-4 text-small2">Escalación de prioridad</span>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 18:15</p>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <p class="color--blue py-0 px-2 rounded-4 fs-11 mb-0 blue-30Op border-blue d-flex align-items-center">
+                              <span class="rounded-circle bg-primary d-inline-block me-1" style="width:6px;height:6px"></span>
+                              Normal
+                            </p>
+                            <i class="bi bi-arrow-right-short text-secondary text-opacity-10"></i>
+                            <span class="text-small text-danger fw-semibold bg-danger px-2 rounded-4 bg-opacity-10 d-flex align-items-center">
+                              <span class="rounded-circle bg-danger d-inline-block me-1" style="width:6px;height:6px"></span>
+                              Crítica
+                            </span>
+                          </div>
+                          <p class="fs-11 mb-0 d-flex align-items-center">
+                            <span class="text-uppercase">SLA:</span>
+                            <span class="text-decoration-line-through ms-2">24h</span>
+                            <i class="bi bi-arrow-right-short text-secondary text-opacity-10 fs-14 mx-1"></i>
+                            <span class="color-orange">4h</span></p>
+                          <p class="mt-2 text-small mb-0">Caso escalado a crítico por impacto financiero alto. Monto involucrado supera $2M.</p>
+
+                          <p class="fs-11 mb-0 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle bg--orange2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-orange">J</span>
+                            <span class="">Jorge Iván Castillo &nbsp;</span>
+                            <span class="fs-11 cl-card-text">· Operador</span>
+                          </p>
+                        </div>
+                      </div> 
+                      <!-- END - Card 5 -->
+
+                      <!-- Card 6 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center violet-30Op border-purple">
+                            <i class="bi bi-bezier color--purple"></i>
+                          </span>
+                        </div>
+
+                        <div class="bg-white rounded-4 border border-1 border-secondary-subtle w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--violet py-1 px-2 rounded-4 fs-11 me-2">Cambio de estado</span>
+                              <div class="d-flex gap-1 align-items-center">
+                                <p class="color--blue py-0 px-2 rounded-4 fs-11 mb-0 blue-30Op border-blue d-flex">
+                                  Asignado
+                                </p>
+                                <i class="bi bi-arrow-right-short text-secondary text-opacity-10"></i>
+                                <p class="p-1 px-2 rounded-4 fs-11 mb-0 purple-30Op color--purple border-purple d-flex">
+                                  En Gestión
+                                </p>
+                              </div>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 18:30</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Contactando a pasarela PSE para verificar el estado de la transacción.</p>
+
+                          <p class="fs-11 mb-0 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color--blue">J</span>
+                            <span class="fs-11">Jorge Iván Castillo · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 6 -->
+
+                      <!-- Card 7 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center slate-30Op border-slate">
+                            <i class="bi bi-eye color-slate"></i>
+                          </span>
+                        </div>
+
+                        <div class="slate-30Op rounded-4 border-slate w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--slate py-1 px-2 rounded-4 fs-11 me-2">Observación interna</span>
+                              <div class="d-flex gap-1 align-items-center">
+                                <p class="cl-card-text bg-slate2 py-0 px-2 rounded-4 fs-11 mb-0 d-flex">      
+                                  Solo visible para operadores
+                                </p>
+                              </div>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 18:45</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Se verificó en el sistema core que el débito fue aplicado correctamente en la cuenta del asociado. El problema está en la acreditación en el banco destino. Se procede a contactar a la pasarela PSE para trazabilidad de la transacción.</p>
+                          <a href="#" class="fs-11 text-decoration-none color-slate mt-2">Ver más</a>
+                          <p class="fs-11 my-0 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-slate bg-slate2">J</span>
+                            <span class="fs-11">Jorge Iván Castillo · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 7 -->
+
+                      <!-- Card 8 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center indigo-30Op border-indigo">
+                            <i class="bi bi-chat-left fs-14 fw-bolder color-indigo"></i>
+                          </span>
+                        </div>
+
+                        <div class="indigo-30Op rounded-4 border-indigo w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg-indigo py-1 px-2 rounded-4 fs-11 me-2">Comentario agregado</span>
+                              <div class="d-flex gap-1 align-items-center">
+                                <p class="cl-card-text bg-slate2 py-0 px-2 rounded-4 fs-11 mb-0 d-flex">      
+                                  Interno
+                                </p>
+                              </div>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 18:50</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Se solicita validación al área de cartera sobre el estado de la transacción PSE. El débito fue aplicado pero no se refleja acreditación en el banco destino.</p>
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-indigo bg-indigo2">J</span>
+                            <span class="fs-11">Jorge Iván Castillo · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 8 -->
+
+                      <!-- Card 9 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center cyan2-30Op border-cyan2">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-cyan2"></i>
+                          </span>
+                        </div>
+
+                        <div class="cyan2-30Op rounded-4 border-cyan2 w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--cyan2 py-1 px-2 rounded-4 fs-11 me-2">Adjunto agregado</span>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 19:05</p>
+                          </div>
+
+                          <div class="d-inline-flex gap-2 align-items-center bg-white rounded-3 border-cyan2 px-2 py-1">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-cyan2"></i>
+                            <p class="text-small mb-0 cyan2-bold">comprobante_pse_20260503.pdf</p>
+                            <p class="text-small2 cl-card-text mb-0">· 245 KB</p>
+                          </div>
+
+                          <p class="mt-2 text-small mb-0">El asociado adjuntó comprobante de pago PSE como soporte de la transacción.</p>
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-cyan2 bg-cyan2">J</span>
+                            <span class="fs-11">Valentina Ospina Ríos · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 9 -->
+
+                      <!-- Card 10 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center teal-30Op border-teal">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-teal"></i>
+                          </span>
+                        </div>
+
+                        <div class="teal-30Op rounded-4 border-teal w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--teal py-1 px-2 rounded-4 fs-11 me-2">Adjunto cargado</span>
+                              <p class="teal-bold py-0 px-2 rounded-4 fs-11 mb-0 teal-light border-teal d-flex">Registro inicial</p>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 19:05</p>
+                          </div>
+
+                          <div class="d-inline-flex gap-2 align-items-center bg-white rounded-3 border-teal px-2 py-1">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-teal"></i>
+                            <p class="text-small mb-0 teal-bold">comprobante_pse_20260503.pdf</p>
+                            <p class="text-small2 cl-card-text mb-0">.PDF</p>
+                          </div>
+
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-teal bg-teal2">V</span>
+                            <span class="fs-11">Valentina Ospina Ríos · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 10 -->
+
+                      <!-- Card 11 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center cyan2-30Op border-cyan2">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-cyan2"></i>
+                          </span>
+                        </div>
+
+                        <div class="cyan2-30Op rounded-4 border-cyan2 w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--cyan2 py-1 px-2 rounded-4 fs-11 me-2">Adjunto agregado</span>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 19:07</p>
+                          </div>
+
+                          <div class="d-inline-flex gap-2 align-items-center bg-white rounded-3 border-cyan2 px-2 py-1">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-cyan2"></i>
+                            <p class="text-small mb-0 cyan2-bold">captura_transaccion.png</p>
+                            <p class="text-small2 cl-card-text mb-0">· 128 KB</p>
+                          </div>
+
+                          <p class="mt-2 text-small mb-0">El asociado adjuntó captura de pantalla de la transacción en la app.</p>
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-cyan2 bg-cyan2">J</span>
+                            <span class="fs-11">Valentina Ospina Ríos · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 11 -->
+
+                      <!-- Card 12 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center teal-30Op border-teal">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-teal"></i>
+                          </span>
+                        </div>
+
+                        <div class="teal-30Op rounded-4 border-teal w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--teal py-1 px-2 rounded-4 fs-11 me-2">Adjunto cargado</span>
+                              <p class="teal-bold py-0 px-2 rounded-4 fs-11 mb-0 teal-light border-teal d-flex">Registro inicial</p>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 19:07</p>
+                          </div>
+
+                          <div class="d-inline-flex gap-2 align-items-center bg-white rounded-3 border-teal px-2 py-1">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-teal"></i>
+                            <p class="text-small mb-0 teal-bold">captura_transaccion.png</p>
+                            <p class="text-small2 cl-card-text mb-0 text-uppercase">.png</p>
+                          </div>
+
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-teal bg-teal2">V</span>
+                            <span class="fs-11">Valentina Ospina Ríos · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 12 -->
+
+                      <!-- Card 13 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center slate-30Op border-slate">
+                            <i class="bi bi-eye color-slate"></i>
+                          </span>
+                        </div>
+
+                        <div class="slate-30Op rounded-4 border-slate w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--slate py-1 px-2 rounded-4 fs-11 me-2">Observación interna</span>
+                              <div class="d-flex gap-1 align-items-center">
+                                <p class="cl-card-text bg-slate2 py-0 px-2 rounded-4 fs-11 mb-0 d-flex">      
+                                  Solo visible para operadores
+                                </p>
+                              </div>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 20:00</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">PSE confirmó que la transacción fue procesada correctamente desde su extremo. El problema está en la red interbancaria. Se escala a prioridad crítica y se reasigna al especialista de pagos electrónicos.</p>
+                          <a href="#" class="fs-11 text-decoration-none color-slate mt-2">Ver más</a>
+                          <p class="fs-11 my-0 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-slate bg-slate2">J</span>
+                            <span class="fs-11">Jorge Iván Castillo · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 13 -->
+
+                      <!-- Card 14 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center bg--esmerald-bottom border-esmerald">
+                            <i class="bi bi-chat-left fs-14 fw-bolder color-esmerald"></i>
+                          </span>
+                        </div>
+
+                        <div class="w-100">                        
+                          <div class="esmerald-30Op rounded-top-4 border-esmerald w-100 pt-2 px-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <div class="d-flex align-items-center">
+                                <span class="text-white bg--esmerald py-1 px-2 rounded-4 fs-11 me-2">Respuesta al asociado</span>
+                                <div class="d-flex gap-1 align-items-center">
+                                  <p class="amber-text amber-30Op border-amber py-0 px-2 rounded-4 fs-11 mb-0 d-flex">      
+                                    Pendiente de Información
+                                  </p>
+                                </div>
+                              </div>
+                              <p class="text-small2 cl-card-text mb-0">04/05/2026 20:15</p>
+                            </div>
+                            <p class="mt-2 text-small mb-0">PSE requiere soporte adicional del asociado: comprobante de pago y pantallazos.</p>
+                            <p class="fs-11 mt-2 mb-3 d-flex align-items-center text-small2 mb-2">
+                              <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-esmerald bg--esmerald2">J</span>
+                              <span class="fs-11">Jorge Iván Castillo · &nbsp;</span>
+                              <span class="fs-11 cl-card-text">Operador</span>
+                            </p>
+                          </div>
+                          <p class="mb-0 w-full fs-11 rounded-bottom-4 border-esmerald border-top-0 bg--esmerald-bottom color-esmerald px-3 py-1">📧 Notificación enviada al correo del asociado · 04/05/2026 20:15</p>
+                        </div>
+                      </div>
+                      <!-- END - Card 14 -->
+
+                      <!-- Card 15 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center indigo-30Op border-indigo">
+                            <i class="bi bi-chat-left fs-14 fw-bolder color-indigo"></i>
+                          </span>
+                        </div>
+
+                        <div class="indigo-30Op rounded-4 border-indigo w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg-indigo py-1 px-2 rounded-4 fs-11 me-2">Comentario agregado</span>
+                              <div class="d-flex gap-1 align-items-center">
+                                <p class="border-esmerald bg--esmerald-bottom color-esmerald py-0 px-2 rounded-4 fs-11 mb-0 d-flex">      
+                                  Visible al asociado
+                                </p>
+                              </div>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 20:20</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Estimado asociado, hemos recibido su caso y estamos gestionando la verificación del pago PSE con la pasarela correspondiente. Le informaremos en un plazo máximo de 24 horas.</p>
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-indigo bg-indigo2">J</span>
+                            <span class="fs-11">Jorge Iván Castillo · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 15 -->
+
+                      <!-- Card 16 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center purple-30Op border-purple">
+                            <i class="bi bi-person-check-fill color--purple"></i>
+                          </span>
+                        </div>
+
+                        <div class="purple-30Op rounded-4 border-purple w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-white bg--purple p-1 px-2 rounded-4 text-small2">Reasignación de caso</span>
+                            <p class="text-small2 cl-card-text mb-0">04/05/2026 17:55</p>
+                          </div>
+                          <div class="d-flex gap-1 align-items-center">
+                            <p class="cl-card-text bg-white p-1 px-2 rounded-4 fs-11 mb-0 border-purple d-flex">
+                              <span class="rounded-circle text-small2 bg--purple2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-2 color--purple">R</span>
+                              <span class="text-decoration-line-through">Rodrigo Esteban Muñoz</span>
+                            </p>
+                            <i class="bi bi-arrow-right-short color--purple text-opacity-10"></i>
+                            <p class="cl-card-text b p-1 px-2 rounded-4 fs-11 mb-0 border-purple d-flex">
+                              <span class="rounded-circle text-small2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-2 text-white bg--purple">J</span>
+                              <span>Jorge Iván Castillo</span>
+                            </p>
+                          </div>
+                          <p class="mt-2 text-small mb-0"><span class="color--purple">Comentario:</span> Se reasigna a operaciones financieras para coordinación con el banco destino.</p>
+
+                          <p class="fs-11 mb-1 mt-2 d-flex align-items-center text-small2">
+                            <span class="rounded-circle bg--purple2 p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color--purple">R</span>
+                            <span>Ricardo Peña Montoya &nbsp;</span>
+                            <span class="fs-11 cl-card-text">· Supervisor</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 16 -->
+
+                      <!-- Card 17 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center indigo-30Op border-indigo">
+                            <i class="bi bi-chat-left fs-14 fw-bolder color-indigo"></i>
+                          </span>
+                        </div>
+
+                        <div class="indigo-30Op rounded-4 border-indigo w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg-indigo py-1 px-2 rounded-4 fs-11 me-2">Comentario agregado</span>
+                              <div class="d-flex gap-1 align-items-center">
+                                <p class="cl-card-text bg-slate2 py-0 px-2 rounded-4 fs-11 mb-0 d-flex">      
+                                  Interno
+                                </p>
+                              </div>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">05/05/2026 09:30</p>
+                          </div>
+                          <p class="mt-2 text-small mb-0">Confirmado con PSE: transacción procesada correctamente en su extremo. El problema está en la red interbancaria entre PSE y Davivienda. Se está escalando con el banco destino para la acreditación manual.</p>
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-indigo bg-indigo2">R</span>
+                            <span class="fs-11">Rodrigo Esteban Muñoz · &nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 17 -->
+
+                      <!-- Card 18 -->
+                      <div class="d-flex mt-3 gap-3">
+                        <div class="d-flex">
+                          <span class="rounded-circle p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center teal-30Op border-teal">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-teal"></i>
+                          </span>
+                        </div>
+
+                        <div class="teal-30Op rounded-4 border-teal w-100 py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                              <span class="text-white bg--teal py-1 px-2 rounded-4 fs-11 me-2">Adjunto cargado</span>
+                              <p class="teal-bold py-0 px-2 rounded-4 fs-11 mb-0 teal-light border-teal d-flex">Gestión interna</p>
+                            </div>
+                            <p class="text-small2 cl-card-text mb-0">05/05/2026 09:45</p>
+                          </div>
+
+                          <div class="d-inline-flex gap-2 align-items-center bg-white rounded-3 border-teal px-2 py-1">
+                            <i class="bi bi-paperclip fs-14 fw-bolder color-teal"></i>
+                            <p class="text-small mb-0 teal-bold">respuesta_pse_interbancaria.pdf</p>
+                            <p class="text-small2 cl-card-text mb-0 text-uppercase">.PDF</p>
+                          </div>
+
+                          <p class="fs-11 mt-2 mb-1 d-flex align-items-center text-small2">
+                            <span class="rounded-circle p-0 ratio-1x1 letter-min-name d-flex align-items-center justify-content-center me-1 color-teal bg-teal2">R</span>
+                            <span class="fs-11">Rodrigo Esteban Muñoz ·&nbsp;</span>
+                            <span class="fs-11 cl-card-text">Operador</span>
+                          </p>
+                        </div>
+                      </div>
+                      <!-- END - Card 18 -->
+                    </div>
+                  </div>
+
+                  <div id="response" class="d-none">response</div>
+                </section>
+              </div>
             </div>
-            <div class="col-4">
-              <div class="bg-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad mollitia rerum unde sit recusandae quos, perferendis temporibus repellat odit exercitationem voluptatibus deserunt doloremque minus sequi facere atque tempore sint beatae.</div>
-            </div>
+
+            <aside class="col-4 bg-light border-end">
+              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+                <span class="text-uppercase text-secondary fw-bold d-block mb-3" style="font-size: 0.72rem; letter-spacing: 0.05em;">Estado Actual</span>
+                
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-secondary">Estado</span>
+                  <span class="badge px-2 py-1 rounded-pill fw-semibold" style="background-color: #f3e8ff; color: #a855f7;">Asignado</span>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-secondary">Prioridad</span>
+                  <span class="badge px-2 py-1 rounded-pill fw-semibold" style="background-color: #fee2e2; color: #ef4444;">Crítica</span>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="text-secondary">Responsable</span>
+                  <span class="fw-semibold text-dark text-end" style="font-size: 0.85rem;">Rodrigo Esteban Muñoz</span>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-secondary">SLA</span>
+                  <span class="fw-semibold text-dark">4h</span>
+                </div>
+              </div>
+
+              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-gear text-secondary me-2"></i>
+                  <span class="fw-semibold text-dark">Cambiar estado</span>
+                </div>
+                <select class="form-select text-dark-emphasis">
+                  <option selected>Asignado</option>
+                  <option value="1">En progreso</option>
+                  <option value="2">Resuelto</option>
+                </select>
+              </div>
+
+              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-exclamation-triangle text-warning me-2"></i>
+                  <span class="fw-semibold text-dark">Cambiar prioridad</span>
+                </div>
+                <p class="text-secondary mb-3" style="font-size: 0.78rem; line-height: 1.3;">
+                  Solo se muestran las prioridades permitidas para esta categoría. El SLA se recalculará automáticamente.
+                </p>
+                <select class="form-select text-warning-emphasis fw-medium" style="border: 1px solid #fef08a; background-color: #fefce8;">
+                  <option selected>Prioridad actual: Crítica</option>
+                  <option value="1">Alta</option>
+                  <option value="2">Media</option>
+                </select>
+              </div>
+
+              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-person text-secondary me-2"></i>
+                  <span class="fw-semibold text-dark">Reasignar caso</span>
+                </div>
+                <p class="text-secondary mb-3" style="font-size: 0.78rem; line-height: 1.3;">
+                  Transfiera este caso a otro operador. El cambio quedará registrado en la trazabilidad.
+                </p>
+                <div class="input-group">
+                  <input type="text" class="form-control text-dark" value="Responsable: Rodrigo Esteban" readonly style="font-size: 0.85rem;">
+                  <span class="input-group-text bg-white text-secondary">
+                    <i class="bi bi-person-gear"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-chat-left text-secondary me-2"></i>
+                  <span class="fw-semibold text-dark">Registrar observación</span>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="3" placeholder="Escriba su observación interna o respuesta al asociado..." style="font-size: 0.85rem;"></textarea>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="notificarAsociado">
+                  <label class="form-check-label text-secondary" for="notificarAsociado" style="font-size: 0.8rem;">
+                    Notificar esta respuesta al asociado
+                  </label>
+                </div>
+                <button class="btn w-100 py-2 fw-semibold" style="background-color: #1e3a8a; color: white; font-size: 0.85rem;">
+                  Registrar observación
+                </button>
+              </div>
+
+              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+                <span class="text-uppercase text-secondary fw-bold d-block mb-3" style="font-size: 0.72rem; letter-spacing: 0.05em;">Acciones Finales</span>
+                
+                <button class="btn w-100 py-2 fw-semibold mb-2 d-flex align-items-center justify-content-center" style="background-color: #15803d; color: white; font-size: 0.85rem;">
+                  <i class="bi bi-lock me-2"></i> Cerrar caso
+                </button>
+                
+                <button class="btn w-100 py-2 fw-semibold d-flex align-items-center justify-content-center" style="color: #dc2626; background-color: #fef2f2; border: 1px solid #fee2e2; font-size: 0.85rem;">
+                  <i class="bi bi-x-circle me-2"></i> Anular caso
+                </button>
+              </div>
+
+            </aside>
           </div>
         </div>
       </main>
