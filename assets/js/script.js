@@ -147,4 +147,10 @@ $(window).on("load", function(){
       `
     });
   }
+
+  $("#btnDescCard").on("click", () => {
+    $("#contentDescCard").toggleClass("d-none")
+    $("#footerCard").toggleClass("d-none")
+    $("#iconCardDesc").toggleClass("bi-chevron-up")
+  })
 });
