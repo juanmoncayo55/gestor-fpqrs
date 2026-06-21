@@ -148,9 +148,11 @@ $(window).on("load", function(){
     });
   }
 
-  $("#btnDescCard").on("click", () => {
-    $("#contentDescCard").toggleClass("d-none")
-    $("#footerCard").toggleClass("d-none")
-    $("#iconCardDesc").toggleClass("bi-chevron-up")
+  $("[data-card-role='button']").on("click", function(){
+    const container = $(this).closest("[data-card-container]");
+
+    container.find("[data-card-role='content']").toggleClass("d-none");
+    container.find(".footerCard").toggleClass("d-none")
+    $(this).find('i').toggleClass("bi-chevron-up");
   })
 });
