@@ -2089,34 +2089,30 @@
                 </button>
               </div>
 
-              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle py-3 px-3 mb-3">
                 <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-chat-left text-secondary me-2"></i>
-                  <span class="fw-semibold text-dark">Registrar observación</span>
+                  <i class="bi bi-chat-left  text-blue-black me-2 fs-14"></i>
+                  <span class="text-black fs-14">Registrar observación</span>
                 </div>
-                <div class="mb-3">
-                  <textarea class="form-control" rows="3" placeholder="Escriba su observación interna o respuesta al asociado..." style="font-size: 0.85rem;"></textarea>
+
+                <textarea class="form-control bg-body-tertiary fs-14 rounded-3" rows="4" placeholder="Escriba su observación interna o respuesta al asociado..."></textarea>
+
+                <div class="my-3 d-flex align-items-center gap-2">
+                  <input type="checkbox" name="not_response" id="not_response">
+                  <label for="not_response" class="text-small text-blue-black">Notificar esta respuesta al asociado</label>
                 </div>
-                <div class="form-check mb-3">
-                  <input class="form-check-input" type="checkbox" id="notificarAsociado">
-                  <label class="form-check-label text-secondary" for="notificarAsociado" style="font-size: 0.8rem;">
-                    Notificar esta respuesta al asociado
-                  </label>
-                </div>
-                <button class="btn w-100 py-2 fw-semibold" style="background-color: #1e3a8a; color: white; font-size: 0.85rem;">
-                  Registrar observación
-                </button>
+                <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-2 w-100">Registrar observación</button>
               </div>
 
               <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
-                <span class="text-uppercase text-secondary fw-bold d-block mb-3" style="font-size: 0.72rem; letter-spacing: 0.05em;">Acciones Finales</span>
+                <span class="text-uppercase cl-card-text fw-light d-block mb-3 fs-11">Acciones Finales</span>
                 
-                <button class="btn w-100 py-2 fw-semibold mb-2 d-flex align-items-center justify-content-center" style="background-color: #15803d; color: white; font-size: 0.85rem;">
+                <button class="w-100 border-0 py-2 px-3 mb-2 rounded-3 d-flex align-items-center justify-content-start bg-green text-white fs-14">
                   <i class="bi bi-lock me-2"></i> Cerrar caso
                 </button>
                 
-                <button class="btn w-100 py-2 fw-semibold d-flex align-items-center justify-content-center" style="color: #dc2626; background-color: #fef2f2; border: 1px solid #fee2e2; font-size: 0.85rem;">
-                  <i class="bi bi-x-circle me-2"></i> Anular caso
+                <button class="alert alert-danger rounded-3 d-flex align-items-center justify-content-start fs-14 text-danger py-2 px-3 mb-0">
+                  <i class="bi bi-x-circle mb-0 text-danger fw-bolder me-2"></i> Anular caso
                 </button>
               </div>
 
@@ -2297,11 +2293,21 @@
               <p class="text-small mb-0 cl-card-text mb-0 lh-sm mb-2">Explique el motivo de la reasignación. Quedará registrado en el historial de trazabilidad del caso.</p>
               <textarea class="form-control bg-body-tertiary fs-14" rows="4" placeholder="Ej: Operador actual se encuentra en vacaciones. Se transfiere al área de operaciones para gestión inmediata..."></textarea>
 
-              
+              <div class="rounded-4 w-100 py-2 px-3 d-flex align-items-start gap-3 mt-4" style="background-color: #eff6ff;">
+                <i class="bi bi-envelope" style="color: #2563eb;"></i>
+
+                <div>
+                  <p class="lh-sm mb-1 fs-14" style="color: #1e40af;">Notificación automática al nuevo responsable</p>
+                  <p class="lh-base mb-0 text-small" style="color: #1e40af;">Al confirmar, se enviará un correo al nuevo responsable con: radicado, tipo de caso, servicio, categoría, subcategoría, prioridad, estado, fechas, nombre del asociado, descripción del caso.</p>
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" data-bs-dismiss="modal" class="rounded-3 border border-1 border-secondary-subtle bg-white  cl-card-text text-sm py-2 shadow-none px-3">Cancelar</button>
-              <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-3">Cambiar prioridad</button>
+              <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-3 opacity-75">
+                <i class="bi bi-person-check-fill text-white fs-14 me-1"></i>
+                Confirmar reasignación
+              </button>
             </div>
           </div>
         </div>

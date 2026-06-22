@@ -6,6 +6,7 @@
   --card-background: #64748b;
   --card-background-secondary: #e8eef5;
   --color-muted:#64748b;
+  --green:#15803d;
 
   --blue: #2563eb;
   --blue-30Op: #eff6ff;
@@ -131,7 +132,7 @@ body{
   text-decoration: none;
 }
 .link-lost-password:hover{
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 /* Management */
 .Management-left-bar{
@@ -252,7 +253,11 @@ body{
 }
 
 .max-h-25{max-height: 250px;}
+.border-dashed {
+  border-style: dashed !important;
+}
 
+.bg-green{background-color: var(--green);}
 .bg--blue{ background-color: var(--blue); }
 .bg--blue2{ background-color: var(--blue-border); }
 .color--blue{ color: var(--blue); }
@@ -329,6 +334,11 @@ body{
     }
     .modal-dialog-reasignar{
       max-width: 520px;
+    }
+}
+@media (min-width: 640px) {
+    .container{
+      max-width: 880px;
     }
 }
 
