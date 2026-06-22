@@ -155,4 +155,8 @@ $(window).on("load", function(){
     container.find(".footerCard").toggleClass("d-none")
     $(this).find('i').toggleClass("bi-chevron-up");
   })
+
+  $("#btnChangeState").on("click", function() {
+    $("#contentState").toggleClass("d-none")
+  });
 });

@@ -197,6 +197,7 @@ body{
 .bg-opac-esmerald{background-color: #ecfdf5;}
 .bg-esmerald{background-color: #a7f3d0;}
 .border-esmerald{border: 1px solid #a7f3d0;}
+.bg-gray{ background-color: var(--bg-gray);  }
 .btnTab{
   transition: .2s all ease;
 }
@@ -238,6 +239,19 @@ body{
   flex: 0 0 112px;
 }
 .arrow-card:hover{ color: #000 !important; }
+.backdrop{backdrop-filter: blur(2px);background-color: rgb(0 128 255 / 4%);}
+.border-primary-blue{ border: 1px solid var(--clr-primary); }
+.custom-radio-card .form-check-input:checked {
+  background-color: #1d3557;
+  border-color: #1d3557;
+  box-shadow: none;
+}
+
+.custom-radio-card:has(.form-check-input:checked) {
+  border: 1px solid #1d3557 !important;
+}
+
+.max-h-25{max-height: 250px;}
 
 .bg--blue{ background-color: var(--blue); }
 .bg--blue2{ background-color: var(--blue-border); }
@@ -306,6 +320,17 @@ body{
 .border-amber{ border: 1px solid var(--border-amber); }
 .amber-30Op{ background-color: var(--amber-30Op); }
 .amber-text{ color: var(--amber-text); }
+
+
+
+@media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 450px;
+    }
+    .modal-dialog-reasignar{
+      max-width: 520px;
+    }
+}
 
 /*
 ESTILOS APLICADOS A SCROLL EN EL NAVIGATION DEL DASHBOARD

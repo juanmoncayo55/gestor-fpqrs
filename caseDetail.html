@@ -2000,71 +2000,93 @@
             </div>
 
             <aside class="col-xl-4 col-12 bg-light border-end">
-              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
-                <span class="text-uppercase text-secondary fw-bold d-block mb-3" style="font-size: 0.72rem; letter-spacing: 0.05em;">Estado Actual</span>
-                
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="text-secondary">Estado</span>
-                  <span class="badge px-2 py-1 rounded-pill fw-semibold" style="background-color: #f3e8ff; color: #a855f7;">Asignado</span>
-                </div>
-                
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="text-secondary">Prioridad</span>
-                  <span class="badge px-2 py-1 rounded-pill fw-semibold" style="background-color: #fee2e2; color: #ef4444;">Crítica</span>
-                </div>
-                
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="text-secondary">Responsable</span>
-                  <span class="fw-semibold text-dark text-end" style="font-size: 0.85rem;">Rodrigo Esteban Muñoz</span>
-                </div>
-                
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="text-secondary">SLA</span>
-                  <span class="fw-semibold text-dark">4h</span>
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle py-3 px-3 mb-3">
+                <p class="text-uppercase text-small2 cl-card-text mb-0">Estado Actual</p>
+
+                <div class="mt-2 d-flex flex-column gap-2">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-small2 cl-card-text mb-0">Estado</p>
+                    <p class="badged-pending px-2 rounded-4 m-0 bg-opacity-10 text-small">Pendiente de Información</p>
+                  </div>
+                  
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-small2 cl-card-text mb-0">Prioridad</p>
+                    <span class="text-small text-danger fw-semibold bg-danger py-0 px-2 rounded-4 bg-opacity-10 ">
+                      Crítica
+                    </span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-small2 cl-card-text mb-0">Responsable</p>
+                    <p class="text-small2 text-black mb-0">Rodrigo Esteban Muñoz</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-small2 cl-card-text mb-0">SLA</p>
+                    <p class="text-small2 text-black mb-0">4h</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle py-3 px-3 mb-3">
                 <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-gear text-secondary me-2"></i>
-                  <span class="fw-semibold text-dark">Cambiar estado</span>
+                  <i class="bi bi-gear text-blue-black text-small me-2"></i>
+                  <span class="text-black fs-14">Cambiar estado</span>
                 </div>
-                <select class="form-select text-dark-emphasis">
-                  <option selected>Asignado</option>
-                  <option value="1">En progreso</option>
-                  <option value="2">Resuelto</option>
-                </select>
+
+                <div class="position-relative">
+                  <button class="bg-gray rounded-3 border border-1 border-secondary-subtle d-flex justify-content-between align-items-center p-2 w-100" id="btnChangeState">
+                    <p class="text-black fs-14 mb-0">Pendiente de información</p>
+                    <i class="bi bi-chevron-down text-small text-secondary"></i>
+                  </button>
+                  <div class="position-absolute z-1 top-100 w-100 bg-white border border-1 border-secondary-subtle rounded-3 shadow overflow-hidden mt-1 d-none" id="contentState">
+                    <button class="border-0 border-bottom border-secondary-subtle w-100 p-2 bg-white d-flex justify-content-start">
+                      <p class="color--blue py-0 px-2 rounded-4 fs-11 mb-0 blue-30Op ">Radicado</p>
+                    </button>
+                    <button class="border-0 border-bottom border-secondary-subtle w-100 p-2 bg-white d-flex justify-content-start">
+                      <p class="py-0 px-2 rounded-4 fs-11 mb-0 purple-30Op color--purple d-flex">Asignado</p>
+                    </button>
+                    <button class="border-0 border-bottom border-secondary-subtle w-100 p-2 bg-white d-flex justify-content-start">
+                      <p class="badged-pending px-2 rounded-4 m-0 bg-opacity-10 text-small">En Gestión</p>
+                    </button>
+                    <button class="border-0 border-bottom border-secondary-subtle w-100 p-2 bg-white d-flex justify-content-start">
+                      <p class="bg--esmerald-bottom color-esmerald py-0 px-2 rounded-4 fs-11 mb-0 d-flex">Respondido</p>
+                    </button>
+                    <button class="border-0 border-bottom border-secondary-subtle w-100 p-2 bg-white d-flex justify-content-start">
+                      <p class="text-small text-danger fw-semibold bg-danger py-0 px-2 rounded-4 bg-opacity-10 mb-0">Reabierto</p>
+                    </button>
+                  </div>
+                </div>
               </div>
 
-              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle py-3 px-3 mb-3">
                 <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-exclamation-triangle text-warning me-2"></i>
-                  <span class="fw-semibold text-dark">Cambiar prioridad</span>
+                  <i class="bi bi-exclamation-triangle text-warning me-2 text-small"></i>
+                  <span class="text-black fs-14">Cambiar prioridad</span>
                 </div>
-                <p class="text-secondary mb-3" style="font-size: 0.78rem; line-height: 1.3;">
+
+                <p class="text-secondary mb-0 text-small lh-sm  mb-3">
                   Solo se muestran las prioridades permitidas para esta categoría. El SLA se recalculará automáticamente.
                 </p>
-                <select class="form-select text-warning-emphasis fw-medium" style="border: 1px solid #fef08a; background-color: #fefce8;">
-                  <option selected>Prioridad actual: Crítica</option>
-                  <option value="1">Alta</option>
-                  <option value="2">Media</option>
-                </select>
+
+                <button type="button" class="rounded-3 orange-30Op border-amber d-flex justify-content-between align-items-center p-2 w-100" id="btnChangeState" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <p class="amber-text fs-14 mb-0">Prioridad actual: Crítica</p>
+                  <i class="bi bi-chevron-down text-small text-secondary"></i>
+                </button>
               </div>
 
-              <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle py-3 px-3 mb-3">
                 <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-person text-secondary me-2"></i>
-                  <span class="fw-semibold text-dark">Reasignar caso</span>
+                  <i class="bi bi-person-check-fill  text-blue-black me-2 fs-14"></i>
+                  <span class="text-black fs-14">Reasignar caso</span>
                 </div>
-                <p class="text-secondary mb-3" style="font-size: 0.78rem; line-height: 1.3;">
+
+                <p class="text-secondary mb-0 text-small lh-sm  mb-3">
                   Transfiera este caso a otro operador. El cambio quedará registrado en la trazabilidad.
                 </p>
-                <div class="input-group">
-                  <input type="text" class="form-control text-dark" value="Responsable: Rodrigo Esteban" readonly style="font-size: 0.85rem;">
-                  <span class="input-group-text bg-white text-secondary">
-                    <i class="bi bi-person-gear"></i>
-                  </span>
-                </div>
+
+                <button type="button" class="rounded-3 bg-white border border-border bg-background d-flex justify-content-between align-items-center p-2 w-100" id="btnChangeState" data-bs-toggle="modal" data-bs-target="#modalReasignar">
+                  <p class="text-blue-black fs-14 mb-0">Responsable: Rodrigo Esteban</p>
+                  <i class="bi bi-person-check-fill text-small text-blue-black"></i>
+                </button>
               </div>
 
               <div class="card border-light-subtle rounded-3 p-3 mb-3 bg-white shadow-sm">
@@ -2102,6 +2124,187 @@
           </div>
         </div>
       </main>
+
+
+      <!-- Modals -->
+      <!-- Modal Priodidad Actual -->
+      <div class="modal fade backdrop" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-start gap-3">
+              <div class="d-flex flex-column">
+                <h1 class="fs-6 text-blue-black">Cambiar Prioridad</h1>
+                <p class="text-small mb-0 cl-card-text">Solo prioridades permitidas para esta categoría. El SLA se recalculará.</p>
+              </div>
+              <button class="p-0 border-0 bg-transparent">
+                <i class="bi bi-x cl-card-text fw-bolder fs-4"></i>
+              </button>
+              <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+            </div>
+            <div class="modal-body">
+              <p class="fs-14 text-blue-black">Nueva priodidad <span class="text-danger">*</span></p>
+
+              <div class="d-flex flex-column mb-3">
+                <form action="#" class="d-flex flex-column gap-2">
+                  
+                  <label for="r1" class="d-flex justify-content-between align-items-center p-2 rounded-3 border border-1 border-secondary-subtle custom-radio-card">
+                    <div class="d-flex align-items-center gap-2 py-1">
+                      <input type="radio" id="r1" class="form-check-input" name="prioridad" value="prioridad1" checked />
+                      <p class="color--blue py-0 px-2 rounded-4 text-small mb-0 blue-30Op">Normal</p>
+                      <span class="text-small2">(predeterminada)</span>
+                    </div>
+                    <p class="text-small mb-0 cl-card-text">24h SLA</p>
+                  </label>
+
+                  <label for="r2" class="d-flex justify-content-between align-items-center p-2 rounded-3 border border-1 border-secondary-subtle custom-radio-card">
+                    <div class="d-flex align-items-center gap-2 py-1">
+                      <input type="radio" id="r2" class="form-check-input" name="prioridad" value="prioridad2" />
+                      <p class="badged-pending px-2 rounded-4 m-0 bg-opacity-10 text-small">Alta</p>
+                    </div>
+                    <p class="text-small mb-0 cl-card-text">8h SLA</p>
+                  </label>
+
+                  <label for="r3" class="d-flex justify-content-between align-items-center p-2 rounded-3 border border-1 border-secondary-subtle custom-radio-card">
+                    <div class="d-flex align-items-center gap-2 py-1">
+                      <input type="radio" id="r3" class="form-check-input" name="prioridad" value="prioridad3" />
+                      <p class="text-small text-danger fw-semibold bg-danger py-0 px-2 rounded-4 bg-opacity-10 mb-0">Crítica</p>
+                    </div>
+                    <p class="text-small mb-0 cl-card-text">4h SLA</p>
+                  </label>
+                  
+                </form>
+              </div>
+
+              <p class="fs-14 text-blue-black mb-2">Motivo del cambio <span class="text-danger">*</span></p>
+
+              <textarea class="form-control bg-body-tertiary fs-14" rows="2" placeholder="Justifique el cambio de priodidad..."></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-bs-dismiss="modal" class="rounded-3 border border-1 border-secondary-subtle bg-white  cl-card-text text-sm py-2 shadow-none px-3">Cancelar</button>
+              <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-3">Cambiar prioridad</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Reasignar Caso -->
+       <div class="modal fade backdrop" id="modalReasignar" tabindex="-1" aria-labelledby="modalReasignarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-reasignar">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-start gap-3">
+              <div class="d-flex flex-column">
+                <h1 class="fs-6 text-blue-black">Reasignar Caso</h1>
+                <p class="text-small mb-0 cl-card-text">Transfiera la responsabilidad del caso FPQRS-2026-04779 a otro operador activo</p>
+              </div>
+              <button class="p-0 border-0 bg-transparent">
+                <i class="bi bi-x cl-card-text fw-bolder fs-4"></i>
+              </button>
+              <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+            </div>
+            <div class="modal-body">
+
+              <div class="d-flex m-auto px-4 py-2 gap-3 mb-3">
+                <i class="bi bi-person-check-fill  text-blue-black me-2 fs-6 mt-2"></i>
+                <div class="d-flex flex-column">
+                  <p class="fs-11 mb-1 cl-card-text text-uppercase lh-sm">Responsable actual</p>
+                  <p class="fs-6 text-blue-black mb-0 lh-sm">Reasignar Caso</p>
+                  <p class="text-small mb-0 cl-card-text mb-0 lh-sm">Analista de Pagos Electrónicos · Operaciones Financieras</p>
+                </div>
+              </div>
+
+
+              <p class="fs-14 text-blue-black mb-2">Nuevo operador responsable <span class="text-danger">*</span></p>
+              <div class="position-relative w-100 mb-2">
+                <input type="email" class="form-control ps-4 rounded-3 bg-light fs-14" id="exampleFormControlInput1" placeholder="Buscar por nombre, área o cargo...">
+                <i class="bi bi-search text-small position-absolute start-0 top-50 translate-middle-y ps-2"></i>
+              </div>
+
+              <div class="bg-white rounded-4 border border-1 border-secondary-subtle mb-3 overflow-x-auto max-h-25">
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">VO</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Valentina Ospina Ríos</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Coordinadora de Atención al Asociado · Servicio al Asociado</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">CA</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Carlos Andrés Moreno</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Analista de Crédito Senior · Cartera y Crédito</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">LF</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Luisa Fernanda Vargas</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Especialista Canales Digitales · Tecnología e Innovación</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">JI</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Jorge Iván Castillo</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Jefe de Operaciones Financieras · Operaciones Financieras</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">MS</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Marcela Suárez Peña</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Analista de Ahorro y Captación · Captación y Ahorro</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">AF</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Andrés Felipe Gómez</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Gestor de Reclamaciones · Gestión de Reclamos</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">DC</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Diana Carolina Ríos</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Analista de Cartera · Cartera y Crédito</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">CE</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Claudia Esperanza Niño</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Especialista en Centrales de Riesgo · Riesgo</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 p-3 border-bottom border-1 border-secondary-subtle">
+                  <span class="rounded-circle text-small bg-secondary bg-opacity-10 p-0 ratio-1x1 avatar-name2 d-flex align-items-center justify-content-center lh-sm text-blue-black">NC</span>
+                  <div class="d-flex flex-column">
+                    <p class="fs-6 text-blue-black mb-0 lh-sm">Nohora Cecilia Bernal</p>
+                    <p class="text-small mb-0 cl-card-text mb-0 lh-sm text-truncate">Analista de Crédito Vivienda · Cartera y Crédito</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="fs-6 text-blue-black mb-0 lh-sm mb-2">Comentario de reasignación (opcional)</p>
+              <p class="text-small mb-0 cl-card-text mb-0 lh-sm mb-2">Explique el motivo de la reasignación. Quedará registrado en el historial de trazabilidad del caso.</p>
+              <textarea class="form-control bg-body-tertiary fs-14" rows="4" placeholder="Ej: Operador actual se encuentra en vacaciones. Se transfiere al área de operaciones para gestión inmediata..."></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-bs-dismiss="modal" class="rounded-3 border border-1 border-secondary-subtle bg-white  cl-card-text text-sm py-2 shadow-none px-3">Cancelar</button>
+              <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-3">Cambiar prioridad</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 </body>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
