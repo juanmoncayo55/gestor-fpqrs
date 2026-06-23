@@ -155,6 +155,10 @@ body{
 }
 .Management-left-bar__menu .menu-title, .Management-left-bar__menu + .menu-title{letter-spacing: .5px;}
 .Management-left-bar__menu .navigation a{ font-size: 14px;}
+.Management-left-bar__menu .navigation a:hover{
+  transition: .3s all ease-in-out;
+  color: #FFF !important;
+}
 .ff-zilla{font-family: 'Zilla Slab', serif;font-variant-numeric: lining-nums;letter-spacing: 2px;}
 .dot-danger{top: 10%; right: 6%;}
 .fs-14{font-size: 14px;}
@@ -191,6 +195,13 @@ body{
   color: #FFF !important;
   background-color: #1e3a5f;
 }
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+}
+
 .bg-gestion{background-color: #fff3e0;color: #e65100;}
 .bg-asignado{background-color: #f3e5f5;color: #6a1b9a;}
 .badged-pending{background-color: #fffde7; color: #f9a825;}
@@ -327,7 +338,18 @@ body{
 .amber-text{ color: var(--amber-text); }
 
 
-
+@media(max-width: 1024px){
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+  }
+}
+@media(max-width: 550px){
+  .grid-container{
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 1rem;
+    }
+}
 @media (min-width: 576px) {
     .modal-dialog {
       max-width: 450px;

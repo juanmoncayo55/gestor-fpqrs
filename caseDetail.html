@@ -30,15 +30,15 @@
         <div class="Management-left-bar__menu p-2 py-3">
           <p class="menu-title text-small2 text-white text-opacity-50 text-uppercase fw-normal ps-2 my-2 mt-0 hide-nav-child">Operación</p>
           <nav class="navigation d-flex flex-column gap-1">
-            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3 bg-white bg-opacity-25">
+            <a href="caseManagement.html" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-folder2-open ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Bandeja de entrada</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="caseDetail.html" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3 bg-white bg-opacity-25">
               <i class="bi bi-file-earmark-text ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Detalle de Caso</span>
             </a>
-            <a href="#" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
+            <a href="registration-fpqrs.html" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3">
               <i class="bi bi-list-check ms-1 fs-5"></i>
               <span  class="pe-3 hide-nav-child">Registrar FPQRS</span>
             </a>
@@ -82,6 +82,28 @@
           </nav>
         </div>
 
+
+        <div class="position-absolute bottom-0 p-2 py-3 w-100 bg-clr-primary border-top border-1 border-white border-opacity-10">
+          <a href="caseManagement.html" class="text-decoration-none px-2 py-1 text-white text-opacity-75 rounded-3 d-flex align-items-center gap-3 fs-14">
+            <i class="bi bi-bell ms-1 fs-5"></i>
+            <span  class="pe-3 hide-nav-child">Notificaciones</span>
+          </a>
+
+          <div class="d-flex align-items-center gap-2 ps-3 my-3">
+            <p class="avatar-name bg-white bg-opacity-25 rounded-circle d-flex justify-content-center align-items-center mb-0">
+              <i class="bi bi-person text-white lh-sm"></i>
+            </p>
+            <div>
+              <p class="text-white text-small mb-0 lh-sm hide-nav-child">Sofia Martinez</p>
+              <p class="text-white text-opacity-50 text-small2 mb-0 lh-sm hide-nav-child">Administrador</p>
+            </div>
+          </div>
+
+          <a href="index.html" class="text-decoration-none px-2 py-1 text-white text-opacity-50 rounded-3 d-flex align-items-center gap-3 text-small">
+            <i class="bi bi-box-arrow-right ms-1"></i>
+            <span class="pe-3 hide-nav-child">Cerrar sesión</span>
+          </a>
+        </div>
       </aside>
 
       <main class="d-flex justify-content-start align-items-start flex-column py-4 flex-grow-1 main-content px-3">
@@ -241,7 +263,7 @@
                 </div>
 
                 <section id="contentTab" class="p-3">
-                  <div id="description" class="d-none">
+                  <div id="description" class="">
                     <p class="cl-card-text text-uppercase text-small">Descripción del caso</p>
                     <div class="p-3">
                       <p class="mb-0 fs-14">Pago PSE por $2.350.000 al banco Davivienda no fue acreditado. Código: PSE-20260503-8847.</p>
@@ -436,7 +458,7 @@
                       </div>
                     </div>
                   </div>
-                  <div id="history" class="">
+                  <div id="history" class="d-none">
                     <div class="d-flex flex-column justify-content-between py-1 px-2 pb-3">
                       <div class="d-flex align-items-center gap-2">
                         <i class="bi bi-clock clr-primary fs-14"></i>
@@ -2020,7 +2042,62 @@
                     </div>
                   </div>
 
-                  <div id="response" class="d-none">response</div>
+                  <div id="response" class="d-none">
+                    <section class="bg-white rounded-4 border border-1 border-secondary-subtle mt-3">
+                      <div class="d-flex align-items-center gap-2 border-bottom border-1 border-secondary-subtle px-3 py-2">
+                        <i class="bi bi-send"></i>
+                        <p class="text-blue-black fs-11 mb-0 text-uppercase">Redactar respuesta al asociado</p>
+                      </div>
+
+                      <form class="p-3">
+                        <div class="row align-items-center mb-3">
+                          <div class="col-auto">
+                            <p class="text-blue-black fs-11 mb-0 text-uppercase">Para</p>
+                          </div>
+                          <div class="col text-left">
+                            <p class="text-blue-black fs-14 mb-0">jl.patino@empresa.com.co</p>
+                          </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                          <div class="col-auto">
+                            <p class="text-blue-black fs-11 mb-0 text-uppercase">Asunto</p>
+                          </div>
+                          <div class="col text-left">
+                            <input type="text" id="names" class="form-control rounded-3 fs-14 py-2" placeholder="Re: Caso FPQRS-2026-04779">
+                          </div>
+                        </div>
+                        <div class="row px-2 mb-3">
+                          <textarea class="form-control  fs-14" id="descriptionDetails" rows="4" placeholder="Escriba aquí la respuesta para el asociado..."></textarea>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between mb-0">
+                          <label for="uploadFile" class="d-flex align-items-center text-small cl-card-text">
+                            <i class="bi bi-paperclip fs-6"></i>
+                            Adjuntar archivo
+
+                            <input type="file" name="file" id="uploadFile" class="d-none">
+                          </label>
+                          <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-3 opacity-75">
+                            <i class="bi bi-send text-white fs-14 me-1"></i>
+                            Enviar respuesta
+                          </button>
+                        </div>
+
+                        
+                      </form>
+
+                    </section>
+                    <div class="py-3">
+                      <p class="lh-sm mb-0 text-small cl-card-text text-truncate">Respuestas enviadas al asociado</p>
+
+                      <div class="rounded-4 w-100 p-3 gap-3 mt-3 border border-1 border-info-subtle" style="background-color: #eff6ff;">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <p class="lh-sm mb-1 fs-14" style="color: #1e40af;">Respuesta enviada</p>
+                          <p class="lh-sm mb-1 text-small cl-card-text">04/05/2026 20:15</p>
+                        </div>
+                        <p class="lh-base mb-0 fs-14 text-black">PSE requiere soporte adicional del asociado: comprobante de pago y pantallazos.</p>
+                      </div>
+                    </div>
+                  </div>
                 </section>
               </div>
             </div>

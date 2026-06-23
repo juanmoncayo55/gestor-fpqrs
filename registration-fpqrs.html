@@ -66,8 +66,8 @@
           </select>
         </div>
         <div class="col-md-6">
-          <label for="" class="text-blue-black fs-14 mb-1">Número de identificación <span class="text-danger">*</span></label>
-          <input type="number" class="form-control ps-4 rounded-3 fs-14 py-2" style="background-color: #f4f6f9;" placeholder="Ej: 1082456789" />
+          <label for="numberID" class="text-blue-black fs-14 mb-1">Número de identificación <span class="text-danger">*</span></label>
+          <input type="number" id="numberID" class="form-control ps-4 rounded-3 fs-14 py-2" style="background-color: #f4f6f9;" placeholder="Ej: 1082456789" />
         </div>
         <div class="col-md-12">
           <label for="names" class="text-blue-black fs-14 mb-1">Nombre completo <span class="text-danger">*</span></label>
@@ -79,12 +79,12 @@
           <input type="email" id="email" class="form-control ps-4 rounded-3 fs-14 py-2" style="background-color: #f4f6f9;" placeholder="correo@ejemplo.com" />
         </div>
         <div class="col-md-6">
-          <label for="names" class="text-blue-black fs-14 mb-1">Número de celular <span class="text-danger">*</span></label>
-          <input type="text" id="names" class="form-control ps-4 rounded-3 fs-14 py-2" style="background-color: #f4f6f9;" placeholder="3XXXXXXXX" />
+          <label for="numberPhone" class="text-blue-black fs-14 mb-1">Número de celular <span class="text-danger">*</span></label>
+          <input type="text" id="numberPhone" class="form-control ps-4 rounded-3 fs-14 py-2" style="background-color: #f4f6f9;" placeholder="3XXXXXXXX" />
         </div>
         <div class="col-md-12">
-          <label for="names" class="text-blue-black fs-14 mb-1">Dirección de residencia</label>
-          <input type="text" id="names" class="form-control ps-4 rounded-3 fs-14 py-2" style="background-color: #f4f6f9;" placeholder="Calle, carrera, número, ciudad" />
+          <label for="direccion" class="text-blue-black fs-14 mb-1">Dirección de residencia</label>
+          <input type="text" id="direccion" class="form-control ps-4 rounded-3 fs-14 py-2" style="background-color: #f4f6f9;" placeholder="Calle, carrera, número, ciudad" />
         </div>
       </div>
     </section>
@@ -190,7 +190,7 @@
           <p class="text-blue-black fs-14 mb-0">¿Listo para radicar su caso?</p>
           <p class="text-small mb-0">Recibirá un número de radicado y confirmación por correo electrónico</p>
         </div>
-        <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-4">Radicar caso FPQRS <i class="bi bi-chevron-right fs-11 ms-1"></i></button>
+        <button type="button" class="rounded-3 border-0 bg-clr-primary text-white text-sm py-2 shadow-none px-4" id="btnAddFPQRS">Radicar caso FPQRS <i class="bi bi-chevron-right fs-11 ms-1"></i></button>
       </div>
     </section>
   </main>
@@ -204,6 +204,7 @@
 
 
 </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="/assets/js/index.js"></script>
+  <script src="./assets/js/script.js" type="module"></script>
 </html>

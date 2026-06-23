@@ -6,6 +6,8 @@ $(window).on("load", function(){
 
   const tabsFpqrsDetails = document.querySelectorAll("[data-tab]");
   const tabContents = document.querySelectorAll("#contentTab > div");
+  const validateEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const validatePass = /^.{7,}$/;
 
   function styleType(value){
     switch(value){
@@ -116,17 +118,21 @@ $(window).on("load", function(){
     });
   });
   
-  if(tbodyCases !== null){
-    casesFPQRS.slice(0,99).map(casePqrs => {
+  if (tbodyCases !== null) {
+    const nuevoCasoLocal = JSON.parse(localStorage.getItem("dataCaso"));
+
+    if (nuevoCasoLocal) {
+      casesFPQRS.unshift(nuevoCasoLocal);
+    }
+
+    casesFPQRS.slice(0, 99).map(casePqrs => {
       tbodyCases.innerHTML += `
         <tr>
           <td class="fw-medium text-nowrap text-small clr-primary">${casePqrs.id}</td>
           <td class="text-nowrap text-small cl-card-text">${casePqrs.date}</td>
           <td class="text-nowrap text-small2"><span class="${styleType(casePqrs.type)}">${casePqrs.type}</span></td>
           <td class="text-nowrap text-small">${casePqrs.category}</td>
-          <td class="text-small text-break">
-            <span>${casePqrs.subcategory}</span>
-          </td>
+          <td class="text-small text-break"><span>${casePqrs.subcategory}</span></td>
           <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">${casePqrs.description}</td>
           <td class="text-nowrap text-small text-truncate" style="max-width:140px">${casePqrs.client}</td>
           <td class="text-nowrap text-small text-truncate cl-card-text" style="max-width:140px">${casePqrs.assignedTo}</td>
@@ -139,12 +145,11 @@ $(window).on("load", function(){
               ${casePqrs.slaStatus}
             </span>
           </td>
-  
           <td>
             <button class="border-0 bg-transparent text-body-secondary text-opacity-10"><i class="bi bi-eye"></i></button>
           </td>
         </tr>
-      `
+      `;
     });
   }
 
@@ -159,4 +164,106 @@ $(window).on("load", function(){
   $("#btnChangeState").on("click", function() {
     $("#contentState").toggleClass("d-none")
   });
+
+  $("[data-user-type]").on("click", function(){
+    const user = $(this).closest("[data-user]")
+    let userInfo = {email: "", paswword: ""}
+    console.log(user.prevObject[0].dataset.userType);
+    
+    switch(user.prevObject[0].dataset.userType){
+      case "admin": 
+        userInfo.email = "admin@coopfinanzas.com.co";
+        userInfo.password = "Admin@2026!";
+      break;
+      case "user1": 
+        userInfo.email = "operador@coopfinanzas.com.co";
+        userInfo.password = "Oper@2026!";
+      break;
+      case "user2": 
+        userInfo.email = "supervisor@coopfinanzas.com.co";
+        userInfo.password = "Super@2026!";
+      break;
+    }
+    $("#email").val(userInfo.email);
+    $("#password").val(userInfo.password);
+  });
+
+  $("#btnInputPass").on("click", function(e){
+    e.preventDefault();
+
+    const pass = $("#password");
+
+    const type = pass.attr("type") == "password" ? "text" : "password";
+
+    $("#password").attr("type", type);
+    $(this).find("i").toggleClass("bi-eye bi-eye-slash");
+  });
+
+  $("[name='formLogin']").on("submit", function(e){
+    e.preventDefault()
+    $(".error-email, .error-pass").remove();
+    $("#email, #password").removeClass("border-danger");
+
+    const email = $("#email");
+    if (email.val().trim() === "" || !validateEmail.test(email.val())) {
+      email.addClass("border-danger");
+      email.after("<p class='text-danger text-small mb-0 mt-1 error-email'>El correo electrónico no es válido u obligatorio</p>");
+      return false;
+    }
+
+    const password = $("#password");
+    if (password.val().trim() === "") {
+      password.addClass("border-danger");
+      password.parent().after("<p class='text-danger text-small mb-0 mt-1 error-pass'>La contraseña es obligatoria</p>");
+      return false;
+    }
+    if(!validatePass.test( $("#password").val() )){
+      password.addClass("border-danger");
+      password.parent().after("<p class='text-danger text-small mb-0 mt-1 error-pass'>Mínimo 6 caracteres</p>");
+      return false;
+    }
+
+    $("#inputBtnSend").css({
+      "opacity": ".75"
+    })
+    $("#inputBtnSend").text("");
+    $("#inputBtnSend").html('<div class="spinner-border text-light spinner-border-sm" role="status"></div> <span class="ms-1">Verificando credenciales...</span>');
+    setTimeout(function(){
+      window.location.href = "caseManagement.html";
+    }, 3000)
+  });
+
+  $("#password").on("input", function(){
+    if(!validatePass.test( $("#password").val() )){
+      password.addClass("border-danger");
+      password.parent().after("<p class='text-danger text-small mb-0 mt-1 error-pass'>Mínimo 6 caracteres</p>");
+      return false;
+    }else{
+      $(".error-email, .error-pass").remove();
+    $("#email, #password").removeClass("border-danger");
+    }
+  });
+
+  $("#btnAddFPQRS").on("click", function(e){
+    e.preventDefault();
+    const nuevoCaso = {
+      id: `#00${Math.floor(Math.random() * 1000)}`,
+      date: new Date().toLocaleDateString(),
+      type: $("#typeAcoso").val(),
+      category: $("#typeCategory").val(),
+      subcategory: $("#typeSubCategory").val(),
+      description: $("#descriptionDetails").val(),
+      client: $("#names").val(),
+      assignedTo: "Sin asignar",
+      priority: "Media",
+      status: "Abierto",
+      dueDate: new Date().toLocaleDateString(),
+      slaStatus: "Activo"
+    };
+
+    console.log(nuevoCaso);
+    
+    localStorage.setItem("dataCaso", JSON.stringify(nuevoCaso))
+    window.location.href = "caseManagement.html"
+  })
 });
